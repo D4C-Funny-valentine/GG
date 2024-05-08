@@ -19,7 +19,7 @@ const UsagePattern = ({data}) => {
               justifyContentForMainTitle='left'
               textAlign='left'
             >
-              <FactLayoutGrid data={data} xs={12} sx={{my: 2}} />
+              <FactLayoutGrid data={data} xs={12} sx={{my: 2}}/>
             </HeadingTextGroup>
         </Grid>
     </GridLayout>
