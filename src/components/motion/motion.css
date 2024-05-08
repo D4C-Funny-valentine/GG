@@ -1,0 +1,16 @@
+@media (min-width: 0px) {
+    .background_parallax{
+        min-height: calc(-160px + 100vh);
+        margin-top: -100px;
+        padding-top: 100px;
+    }
+}
+
+@media (min-width: 900px) {
+    .background_parallax{
+        min-height: calc(-230px + 100vh);
+        margin-top: -100px;
+        padding-top: 100px;
+    }  
+}
+

@@ -1,0 +1,13 @@
+.aboutus_hero_section::after{
+    content: '';
+    position: absolute;
+    width: 35%;
+    height: 100%;
+    min-height: 250px;
+    top: 0;
+    right: 0;
+    background-image: radial-gradient(rgba(47, 106, 217, 0.4) 20%, transparent 20%);
+    opacity: 0.3;
+    background-size: 18px 18px;
+    z-index: 2;
+}
