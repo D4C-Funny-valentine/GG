@@ -4,6 +4,7 @@ import { Box, Grid } from '@mui/material'
 
 /**
  * @param {object} props - Component properties
+ * @param {number} props.spacing - Spacing property for the Grid.
  * @param {string} props.imgUrl - For the img of the Img container
  * @param {string} props.imgMaxWidth - Maximum width of the image in percentage.
  * @param {number} props.index - The index of the feature.
@@ -13,9 +14,9 @@ import { Box, Grid } from '@mui/material'
  * @returns {React.ReactElement}
  */
 
-const DynamicGridContainer = ({imgUrl, imgMaxWidth = '80%', index, imageStyle, sx={}, children}) => {
+const DynamicGridContainer = ({spacing = 0, imgUrl, imgMaxWidth = '80%', index, imageStyle, sx={}, children}) => {
   return (
-          <Grid container item spacing={0} xs={12} alignItems={'center'} sx={{pt: 8, flexDirection: { md: calculateEven(index) ? 'row' : 'row-reverse'}, ...sx}}>
+          <Grid container item spacing={spacing} xs={12} alignItems={'center'} sx={{pt: 8, flexDirection: { md: calculateEven(index) ? 'row' : 'row-reverse'}, ...sx}}>
               <Grid item xs={12} md={6} sx={{pl : { md: calculateEven(index) ? 0 : 14, xs: 0 }, pt: calculateEven(index) ? 0 : 8 }}>
                     {children}
               </Grid>

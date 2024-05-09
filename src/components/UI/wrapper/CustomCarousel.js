@@ -2,11 +2,13 @@ import React from 'react';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import "./carousel.css";
+import { useMediaQueryDevice } from '../../../hooks';
 
 /**
  * A wrapper component for the React Multi Carousel with default props.
  * 
  * @param {object} props - Component props.
+ * @param {object} props.breakpoint - Breakpoint for the Carousel card.
  * @param {boolean} [props.arrow=false] - Determines whether to show arrow navigation for the carousel.
  * @param {boolean} [props.autoPlay=true] - Determines whether the carousel should autoplay.
  * @param {React.ReactElement[]} props.children - The child elements to be rendered within the carousel.
@@ -37,11 +39,12 @@ import "./carousel.css";
  * @returns {React.ReactElement}
  */
 const CarouselWrapper = ({ 
+    breakpoint,
     arrow, 
     autoPlay, 
     children, 
     additionalTransfrom = 0, 
-    autoPlaySpeed = 3000, 
+    autoPlaySpeed = 5000, 
     centerMode = false, 
     className = "carousel", 
     containerClass = "container-with-dots", 
@@ -65,29 +68,34 @@ const CarouselWrapper = ({
     slidesToSlide = 2, 
     swipeable = true,
 }) => {
+    const {tablet} = useMediaQueryDevice();
     const responsive = {
         superLargeDesktop: {
             breakpoint: { max: 5000, min: 1200 },
-            items: 4
+            items: breakpoint?.xl ? breakpoint?.xl : 4,
+            partialVisibilityGutter: 30
         },
         desktop: {
             breakpoint: { max: 1200, min: 900 },
-            items: 3
+            items: breakpoint?.lg ? breakpoint?.lg : 3,
+            partialVisibilityGutter: 30
         },
         tablet: {
             breakpoint: { max: 900, min: 640 },
-            items: 2
+            items: breakpoint?.md ? breakpoint?.md : 2,
+            partialVisibilityGutter: 30
         },
         mobile: {
             breakpoint: { max: 640, min: 0 },
-            items: 1
+            items: breakpoint?.sm ? breakpoint?.sm : 1,
+            partialVisibilityGutter: 30
         }
     };
     // Default props for the carousel
     const defaultCarouselProps = {
         additionalTransfrom,
         arrows: arrow ?? false,
-        autoPlay: autoPlay ?? true,
+        autoPlay: tablet ? true : autoPlay || false,
         autoPlaySpeed,
         centerMode,
         className,

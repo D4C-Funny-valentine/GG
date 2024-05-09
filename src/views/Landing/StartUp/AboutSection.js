@@ -1,6 +1,6 @@
 import { Box } from '@mui/material'
 import React from 'react'
-import { CarouselCard, CustomCarousel, HeadingTextGroup } from "../../../components"
+import { CarouselCard, CustomCarousel, Heading, HeadingTextGroup, Paragraph } from "../../../components"
 
 const AboutSection = ({data}) => {
   return (
@@ -10,10 +10,19 @@ const AboutSection = ({data}) => {
             mainTitle='Trust the professionals'
         />
         <Box sx={{pt: 8}}>
-            <CustomCarousel>
+            <CustomCarousel autoPlay={false}>
                 {
                     data.map((info, index) => (
-                        <CarouselCard key={info.name} heading={info.name} text={info.position} imageURL={info.profile} index={index}/>
+                        <CarouselCard key={info.name} imageURL={info.profile}>
+                            <Box>
+                                <Heading variant='body1' fontWeight={500}>{info.name}</Heading>
+                                <Paragraph variant='subtitle2'>
+                                    {
+                                        info.position.toString()
+                                    }    
+                                </Paragraph>       
+                            </Box>
+                        </CarouselCard>
                     ))
                }
             </CustomCarousel>

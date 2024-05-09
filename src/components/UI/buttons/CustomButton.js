@@ -1,6 +1,7 @@
 import React from "react"
 import Button from "@mui/material/Button";
 import CircularProgress  from "@mui/material/CircularProgress";
+import { useMediaQueryDevice } from "../../../hooks";
 
 /**
  * Custom button component with support for loading state.
@@ -18,7 +19,8 @@ import CircularProgress  from "@mui/material/CircularProgress";
  * @returns {React.JSX.Element}
  */
 
-const CustomButton = ({ variant = "contained", color = "primary", onClick, children, startIcon, endIcon, loading = false, disabled, sx = {} , progressSize = 24, ...props}) => {
+const CustomButton = ({ variant = "contained", size, color = "primary", onClick, children, startIcon, endIcon, loading = false, disabled, sx = {} , progressSize = 24, ...props}) => {
+    const { tablet } = useMediaQueryDevice();
     return (
         <Button
             variant={variant}
@@ -27,6 +29,7 @@ const CustomButton = ({ variant = "contained", color = "primary", onClick, child
             startIcon={loading ? null : startIcon}
             endIcon={loading ? null : endIcon}
             disabled={loading || disabled}
+            size={size ? size : tablet ? 'medium' : 'small'}
             {...props}
             sx={{ ...sx, opacity: loading ? 0.7 : 1 }}
         >

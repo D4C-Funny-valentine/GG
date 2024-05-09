@@ -1,6 +1,7 @@
 import React from "react";
 import TextField from "@mui/material/TextField";
 import { styled } from "@mui/material";
+import { useMediaQueryDevice } from "../../../hooks";
 
 /**
  * Renders a custom input component with the given props.
@@ -24,7 +25,8 @@ import { styled } from "@mui/material";
 
 
 
-const CustomInput = ({variant="outlined", label, placeholder = '', size= "small", error= false, disabled= false, required= false, labelFocusedColor = 'inherit', fontColor = 'inherit', borderColor = 'inherit', hoverBorderColor = '', focusBorderColor = '', sx={}, ...props}) => {
+const CustomInput = ({variant="outlined", label, placeholder = '', size, error= false, disabled= false, required= false, labelFocusedColor = 'inherit', fontColor = 'inherit', borderColor = 'inherit', hoverBorderColor = '', focusBorderColor = '', sx={}, ...props}) => {
+  const {tablet} = useMediaQueryDevice();
     const CssTextField = styled(TextField)({
         '& label.Mui-focused': {
             color: labelFocusedColor,
@@ -48,7 +50,7 @@ const CustomInput = ({variant="outlined", label, placeholder = '', size= "small"
         label={label}
         placeholder={placeholder}
         variant={variant}
-        size={size}
+        size={size ? size : tablet ? 'medium' : 'small'}
         error={error}
         disabled={disabled}
         required={required}
