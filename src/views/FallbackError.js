@@ -3,7 +3,7 @@ import ErrorPage from './ErrorPage'
 
 const ErrorRoute = () => {
   return (
-    <ErrorPage/>
+    <ErrorPage />
   )
 }
 
