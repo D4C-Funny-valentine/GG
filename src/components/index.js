@@ -27,6 +27,7 @@ const CustomCarousel = lazy(() => import("./UI/wrapper/CustomCarousel"));
     // customize
 const CustomAccordion = lazy(() => import("./UI/customized/CustomAccordion"));
 const CustomListItem = lazy(() => import("./UI/customized/CustomListItem"));
+const CustomPaperCard = lazy(() => import("./UI/customized/CustomPaperCard"));
 
 // common
 const HeadingTextGroup = lazy(() => import("./common/HeadingTextGroup"));
@@ -69,6 +70,7 @@ export  {
     Paragraph,
     CustomInput,
     CustomAccordion,
+    CustomPaperCard,
     CustomListItem,
     CustomCarousel,
     HeadingTextGroup,

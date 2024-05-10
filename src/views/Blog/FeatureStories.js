@@ -1,15 +1,15 @@
 import { Avatar, Box, Divider, Stack } from '@mui/material'
 import React from 'react'
 import { CarouselCard, CustomButton, CustomCarousel, Heading, Paragraph } from '../../components'
-import { feature_stories } from '../../data/_blog'
 import { formatDate } from '../../utils/dateUtils'
+import { hoverCardTranslate } from '../../utils/helperStyle'
 
-const FeatureStories = () => {
+const FeatureStories = ({data}) => {
   return (
     <Box sx={{}}>
         <Box sx={{display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'center', mb: 8}}>
             <Box>
-                <Heading variant='h3' sx={{mb: 2}}>Featured stories</Heading>
+                <Heading variant='h3' sx={{mb: 2}}>Feature stories</Heading>
                 <Paragraph variant='body2'>Here’s what we’ve been up to recently.</Paragraph>
             </Box>
             <CustomButton variant='outlined'>
@@ -26,8 +26,8 @@ const FeatureStories = () => {
             autoPlay={true}
         >
             {
-                feature_stories.map((item, index) => (
-                    <CarouselCard key={`${item.title}-${index}`} imageURL={item.backdrop_url} minHeight={420}>
+                data.map((item, index) => (
+                    <CarouselCard key={`${item.title}-${index}`} imageURL={item.backdrop_url} minHeight={420} sx={{...hoverCardTranslate('Y', -5, '200ms', 'ease-in')}}>
                         <Box>
                             <Heading sx={{mb:2}}>{item.title}</Heading>
                             <Paragraph variant='body2'>{item.description}</Paragraph>
