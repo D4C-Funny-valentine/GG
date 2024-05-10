@@ -27,6 +27,61 @@ const popular_news = [
     }
 ]
 
+const latest_stories = [
+    {
+        url: 'https://assets.maccarianagency.com/backgrounds/img25.jpg',
+        title : 'LOREM IPSUM DOLOR SIT AMET',
+        description : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+        author : 'Clara Bertoletti',
+        date : new Date(),
+        tags: [
+            "UX",
+            "Design",
+            "Themes",
+            "Photography"
+        ]
+    },
+    {
+        url: 'https://assets.maccarianagency.com/backgrounds/img3.jpg',
+        title : 'CONSECTETUR ADIPISCING ELIT',
+        description : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+        author : 'Jhon Anderson',
+        date : new Date(),
+        tags: [
+            "UX",
+            "Design",
+            "Themes",
+            "Photography"
+        ]
+    },
+    {
+        url: 'https://assets.maccarianagency.com/backgrounds/img1.jpg',
+        title : 'LOREM IPSUM DOLOR SIT AMET',
+        description : 'Lorem ipsum dolor sit amet, consectetur adipiscing elitut aliquip ex ea commodo consequat.',
+        author : 'Jhon Anderson',
+        date : new Date(),
+        tags: [
+            "UX",
+            "Design",
+            "Themes",
+            "Photography"
+        ]
+    },
+    {
+        url: 'https://assets.maccarianagency.com/backgrounds/img2.jpg',
+        title : 'CONSECTETUR ADIPISCING ELIT',
+        description : 'Lorem ipsum dolor sit amet, coolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+        author : 'Jhon Anderson',
+        date : new Date(),
+        tags: [
+            "UX",
+            "Design",
+            "Themes",
+            "Photography"
+        ]
+    }
+]
+
 const feature_stories = [
     {
         backdrop_url: 'https://assets.maccarianagency.com/backgrounds/img13.jpg',
@@ -72,5 +127,6 @@ const feature_stories = [
 
 export {
     popular_news,
-    feature_stories 
+    feature_stories,
+    latest_stories
 }

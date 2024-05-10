@@ -6,7 +6,22 @@ const cardBorderColor = (mode) => {
     return {borderColor: mode === 'light' ? 'lightgray' : '#ffffff1f',}
 }
 
+/**
+ * 
+ * @param {'X' | 'Y' | 'Z'} axis - Translate axis.
+ * @param {number} position Translate position by pixel.
+ * @param {string} transitionDelay - Transition delay.
+ * @param {'linear' | 'ease' | 'ease-in' | 'ease-out' | 'ease-in-out'} transitionType - Transition Type.
+ * @returns 
+ */
+
+const hoverCardTranslate = (axis, position, transitionDelay,transitionType) => {
+    return {'&:hover': {transform: `translate${axis ?? 'Y'}(${position + 'px'})`}, transition: `${transitionDelay} all ${transitionType ?? 'linear'}`}
+}
+
+
 export {
     hoverBoxShadowStyle,
-    cardBorderColor
+    cardBorderColor,
+    hoverCardTranslate
 }

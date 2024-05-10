@@ -118,6 +118,12 @@ const CustomThemeProvider = (props) => {
                 fontSize: '0.75rem',
                 fontWeight: 400,
             },
+            caption2: {
+                fontFamily:  'Noto Sans Myanmar, "Inter", "Arial", sans-serif',
+                fontSize: '0.75rem',
+                fontWeight: 400,
+                color: mode === 'light' ? '#677788' : '#aeb0b4'
+            },
             overline: {
                 fontFamily:  'Noto Sans Myanmar, "Inter", "Arial", sans-serif',
             }
@@ -142,6 +148,9 @@ const CustomThemeProvider = (props) => {
             },
             info: {
                 main: mode === 'light' ? '#f7faff' : '#1a2138'
+            },
+            silver : {
+                main : mode === 'light' ? '#00000014' : '#ffffff29',
             },
             sky : {
                 main : '#ffffff'
