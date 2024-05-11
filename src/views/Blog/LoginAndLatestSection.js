@@ -1,14 +1,13 @@
 import { Box, Grid } from '@mui/material'
 import React from 'react'
 import { CustomButton, CustomInput, DynamicGridContainer, GridLayout, Heading, Paragraph } from '../../components'
-import { latest_stories } from '../../data/_blog'
 import { formatDate } from '../../utils/dateUtils'
 import TrendingFlatIcon from "@mui/icons-material/TrendingFlat"
 import { cardBorderColor } from '../../utils/helperStyle'
 import { useThemeSetting } from '../../redux/features'
 
 
-const LoginAndLatestSection = () => {
+const LoginAndLatestSection = ({data}) => {
     const {mode} = useThemeSetting();
   return (
     <Box>
@@ -26,7 +25,7 @@ const LoginAndLatestSection = () => {
                     </Box>
                     <GridLayout spacing={4}>
                         {
-                            latest_stories.map((item) => (
+                            data.map((item) => (
                                 <DynamicGridContainer index={1} spacing={2} imgUrl={item.url} imgMaxWidth='100%' imageStyle={{height: '200px', borderRadius: '0.5rem'}} imgGridCol={{xs : 12, md: 4}} textGridCol={{xs: 12, md: 8}} textPadding={{left : '0px', right: '0px'}}>
                                     <Box>
                                         <Heading variant='body1' sx={{fontWeight: 700}}>{item.title}</Heading>
