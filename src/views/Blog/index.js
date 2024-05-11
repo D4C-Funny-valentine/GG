@@ -2,9 +2,10 @@ import React from 'react'
 import { Box, Container} from '@mui/material'
 import HeroSection from './HeroSection'
 import PopularNews from './PopularNews'
-import { feature_stories, popular_news } from '../../data/_blog'
+import { feature_stories, latest_stories, popular_news } from '../../data/_blog'
 import FeatureStories from './FeatureStories'
 import LatestStories from './LatestStories'
+import LoginAndLatestSection from './LoginAndLatestSection'
 
 const Blog = () => {
     const padding = {xs : 8, md : 12}
@@ -22,8 +23,13 @@ const Blog = () => {
         </Container>
       </Box>
       <Container maxWidth="lg" sx={{py: padding}}>
-        <LatestStories/>
+        <LatestStories data={latest_stories} upcoming={feature_stories}/>
       </Container>
+      <Box sx={{bgcolor: 'info.main'}}>
+        <Container maxWidth="lg" sx={{py: padding}}>
+          <LoginAndLatestSection/>
+        </Container>
+      </Box>
     </Box>
   )
 }
