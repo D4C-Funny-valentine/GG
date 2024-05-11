@@ -25,7 +25,7 @@ import { useMediaQueryDevice } from "../../../hooks";
 
 
 
-const CustomInput = ({variant="outlined", label, placeholder = '', size, error= false, disabled= false, required= false, labelFocusedColor = 'inherit', fontColor = 'inherit', borderColor = 'inherit', hoverBorderColor = '', focusBorderColor = '', sx={}, ...props}) => {
+const CustomInput = ({variant="outlined", label, placeholder = '', size, error= false, disabled= false, required= false, labelFocusedColor = 'primary', fontColor = 'inherit', borderColor = 'inherit', hoverBorderColor = '', focusBorderColor = '', sx={}, ...props}) => {
   const {tablet} = useMediaQueryDevice();
     const CssTextField = styled(TextField)({
         '& label.Mui-focused': {
