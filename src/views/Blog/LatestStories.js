@@ -1,18 +1,17 @@
 import { Box, Grid, Stack } from '@mui/material'
 import React from 'react'
 import { CustomButton, CustomPaperCard, DynamicGridContainer, GridLayout, Heading, Paragraph } from '../../components'
-import { feature_stories, latest_stories } from '../../data/_blog'
 import { formatDate } from '../../utils/dateUtils'
 import CustomChip from '../../components/UI/buttons/CustomChip'
 import { cardBorderColor, hoverCardTranslate } from '../../utils/helperStyle'
 import { useThemeSetting } from '../../redux/features'
 
-const LatestStories = () => {
+const LatestStories = ({data, upcoming}) => {
     const {mode} = useThemeSetting();
   return (
     <Box>
         <GridLayout spacing={6}>
-            <Grid item xs={12} md={8}>
+            <Grid item xs={12} md={upcoming ? 8 : 12}>
                 <Box>
                     <Box sx={{display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'center', mb: 8}}>
                         <Box>
@@ -25,7 +24,7 @@ const LatestStories = () => {
                     </Box>
                     <GridLayout spacing={5}>
                         {
-                            latest_stories.map((item) => (
+                            data?.map((item) => (
                                 <Grid item key={item.title} xs={12} md={6} sx={{...hoverCardTranslate('Y', -5, '200ms', 'ease-in')}}>
                                     <CustomPaperCard imgHeight={400} imgUrl={item.url}>
                                         <Box>
@@ -58,26 +57,30 @@ const LatestStories = () => {
                     </GridLayout>
                 </Box>
             </Grid>
-            <Grid item xs={12} md={4}>
-                <Box sx={{borderRadius: 2, border: 1, ...cardBorderColor(mode), py: 5, px: 3, width: '100%'}}>
-                    <Heading variant='h6' sx={{fontWeight : 700, mb: 10}}>Upcoming updates</Heading>
-                    <GridLayout spacing={2}>
-                        {
-                            feature_stories.map(item => (
-                                <DynamicGridContainer spacing={2} index={1} textPadding={{left: '0px', top: '0px'}} imgUrl={item.backdrop_url} imgMaxWidth='100%' imageStyle={{height: '120px', borderRadius: '0.5rem'}} imgGridCol={{xs: 5,md: 5}} textGridCol={{xs: 7,md: 7}}>
-                                    <Box>
-                                        <Paragraph variant='body1' sx={{fontWeight: 700}}>{item.title}</Paragraph>
-                                        <Paragraph variant='caption2' sx={{my: 2, fontStyle : 'italic'}}>{item.author.name} - {formatDate(item.author.create_date, 'DD MMM')}</Paragraph>
-                                        <CustomButton variant='text' size="small" sx={{p: 2}}>
-                                            Read more
-                                        </CustomButton>
-                                    </Box>
-                                </DynamicGridContainer>
-                            ))
-                        }
-                    </GridLayout>
-                </Box>
-            </Grid>
+            {
+                upcoming && upcoming.length > 0 && (
+                    <Grid item xs={12} md={4}>
+                            <Box sx={{borderRadius: 2, border: 1, ...cardBorderColor(mode), py: 5, px: 3, width: '100%'}}>
+                                <Heading variant='h6' sx={{fontWeight : 700, mb: 10}}>Upcoming updates</Heading>
+                                <GridLayout spacing={2}>
+                                    {
+                                        upcoming?.map(item => (
+                                            <DynamicGridContainer spacing={2} index={1} textPadding={{left: '0px', top: '0px'}} imgUrl={item.backdrop_url} imgMaxWidth='100%' imageStyle={{height: '120px', borderRadius: '0.5rem'}} imgGridCol={{xs: 5,md: 5}} textGridCol={{xs: 7,md: 7}}>
+                                                <Box>
+                                                    <Paragraph variant='body1' sx={{fontWeight: 700}}>{item.title}</Paragraph>
+                                                    <Paragraph variant='caption2' sx={{my: 2, fontStyle : 'italic'}}>{item.author.name} - {formatDate(item.author.create_date, 'DD MMM')}</Paragraph>
+                                                    <CustomButton variant='text' size="small" sx={{p: 2}}>
+                                                        Read more
+                                                    </CustomButton>
+                                                </Box>
+                                            </DynamicGridContainer>
+                                        ))
+                                    }
+                                </GridLayout>
+                            </Box>
+                        </Grid>
+                )
+            }
         </GridLayout>
     </Box>
   )
