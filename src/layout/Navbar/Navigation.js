@@ -7,6 +7,7 @@ import { useDrawer, useThemeSetting } from "../../redux/features";
 import MenuIcon from '@mui/icons-material/Menu';
 import CustomDrawer from "./CustomDrawer";
 import { useMediaQueryDevice } from "../../hooks";
+import { specialPath } from "../../data/common";
 
 const Navigation = () => {
   const { pathname } = useLocation();
@@ -15,11 +16,10 @@ const Navigation = () => {
   const [isScroll, setIsScroll] = React.useState(false);
   const { tablet } = useMediaQueryDevice();
 
-
   const getNavbarColor = () => {
     if (isScroll && mode === 'light'){
       return 'inherit';
-    } else if (pathname === '/' || pathname === '/pages' || mode === 'dark'){
+    } else if (specialPath.includes(pathname) || mode === 'dark'){
       return '#fff';
     } else {
       return 'inherit';
