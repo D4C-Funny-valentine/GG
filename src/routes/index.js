@@ -5,7 +5,7 @@ import ErrorPage from "../views/ErrorPage";
 import { Landing, Company, Pages, Blog, Portfolio, About, StartUp, Carrer, Basic } from "../views";
 import CustomThemeProvider from "../data/_theme";
 import { CssBaseline } from "@mui/material"
-// import { PATH } from "../data/_navData";
+import { PATH } from "../data/_navData";
 
 const router = createBrowserRouter([
   {
@@ -57,7 +57,7 @@ const router = createBrowserRouter([
         // ]
       },
       {
-        path: "/portfolio",
+        path: "/basic",
         element: <Portfolio />,
         children: [
           {

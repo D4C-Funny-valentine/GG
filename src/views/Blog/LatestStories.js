@@ -24,8 +24,8 @@ const LatestStories = ({data, upcoming}) => {
                     </Box>
                     <GridLayout spacing={5}>
                         {
-                            data?.map((item) => (
-                                <Grid item key={item.title} xs={12} md={6} sx={{...hoverCardTranslate('Y', -5, '200ms', 'ease-in')}}>
+                            data?.map((item, index) => (
+                                <Grid item key={item.title + index} xs={12} md={6} sx={{...hoverCardTranslate('Y', -5, '200ms', 'ease-in')}}>
                                     <CustomPaperCard imgHeight={400} imgUrl={item.url}>
                                         <Box>
                                             <Box sx={{mb: 2}}>
@@ -64,8 +64,8 @@ const LatestStories = ({data, upcoming}) => {
                                 <Heading variant='h6' sx={{fontWeight : 700, mb: 10}}>Upcoming updates</Heading>
                                 <GridLayout spacing={2}>
                                     {
-                                        upcoming?.map(item => (
-                                            <DynamicGridContainer spacing={2} index={1} textPadding={{left: '0px', top: '0px'}} imgUrl={item.backdrop_url} imgMaxWidth='100%' imageStyle={{height: '120px', borderRadius: '0.5rem'}} imgGridCol={{xs: 5,md: 5}} textGridCol={{xs: 7,md: 7}}>
+                                        upcoming?.map((item, index) => (
+                                            <DynamicGridContainer key={item.title + index} spacing={2} index={1} textPadding={{left: '0px', top: '0px'}} imgUrl={item.backdrop_url} imgMaxWidth='100%' imageStyle={{height: '120px', borderRadius: '0.5rem'}} imgGridCol={{xs: 5,md: 5}} textGridCol={{xs: 7,md: 7}}>
                                                 <Box>
                                                     <Paragraph variant='body1' sx={{fontWeight: 700}}>{item.title}</Paragraph>
                                                     <Paragraph variant='caption2' sx={{my: 2, fontStyle : 'italic'}}>{item.author.name} - {formatDate(item.author.create_date, 'DD MMM')}</Paragraph>

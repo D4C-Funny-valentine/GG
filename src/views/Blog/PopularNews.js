@@ -14,7 +14,7 @@ const PopularNews = ({data}) => {
         <GridLayout spacing={6}>
             {
                 data.map((item, index) => (
-                    <DynamicGridContainer spacing={4} imgUrl={item.url} imgMaxWidth='100%' imageStyle={{borderRadius: '0.5rem'}} index={index}>
+                    <DynamicGridContainer key={item.title + index} spacing={4} imgUrl={item.url} imgMaxWidth='100%' imageStyle={{borderRadius: '0.5rem'}} index={index}>
                         <Box>
                             <Box sx={{mb: 1}}>
                                 {
