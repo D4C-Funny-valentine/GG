@@ -25,8 +25,8 @@ const LoginAndLatestSection = ({data}) => {
                     </Box>
                     <GridLayout spacing={4}>
                         {
-                            data.map((item) => (
-                                <DynamicGridContainer index={1} spacing={2} imgUrl={item.url} imgMaxWidth='100%' imageStyle={{height: '200px', borderRadius: '0.5rem'}} imgGridCol={{xs : 12, md: 4}} textGridCol={{xs: 12, md: 8}} textPadding={{left : '0px', right: '0px'}}>
+                            data.map((item, index) => (
+                                <DynamicGridContainer key={item.title + index} index={1} spacing={2} imgUrl={item.url} imgMaxWidth='100%' imageStyle={{height: '200px', borderRadius: '0.5rem'}} imgGridCol={{xs : 12, md: 4}} textGridCol={{xs: 12, md: 8}} textPadding={{left : '0px', right: '0px'}}>
                                     <Box>
                                         <Heading variant='body1' sx={{fontWeight: 700}}>{item.title}</Heading>
                                         <Paragraph variant='caption2' sx={{my: 2, fontStyle : 'italic'}}>{item.author} - {formatDate(item.date, 'DD MMM')}</Paragraph>
