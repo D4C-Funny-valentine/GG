@@ -17,7 +17,7 @@ import { Box, Link, Paper } from '@mui/material'
  * @return {React.ReactElement}
  */
 
-const HoverCard = ({info, sx}) => {
+const ProfileCard = ({info, sx}) => {
     const CARD_HOVER_STYLE = { 
       borderRadius: 2, 
       border: '1px solid #0000001f',
@@ -29,8 +29,6 @@ const HoverCard = ({info, sx}) => {
       width: '100%',
       height: '100%'
     }
-
-    console.log(info)
 
     return (
         <Box component={Paper} sx={{...CARD_HOVER_STYLE, ...sx}} elevation={1}>
@@ -52,4 +50,4 @@ const HoverCard = ({info, sx}) => {
     )
   }
 
-export default HoverCard
+export default ProfileCard

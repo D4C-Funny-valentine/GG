@@ -48,7 +48,7 @@ const NumberCountUpCard = lazy(() => import("./common/NumberCountUpCard"));
 const NumberCountUpLayout = lazy(() => import("./common/NumberCountUpLayout"));
 
 const GridLayout = lazy(() => import("./common/GridLayout"));
-const HoverCard = lazy(() => import("./common/HoverCard"));
+const ProfileCard = lazy(() => import("./common/ProfileCard"));
 
 const GoogleMap = lazy(() => import("./common/GoogleMap"));
 
@@ -57,6 +57,9 @@ const DevPlatFormFeatures = lazy(() => import("./intersection/DevPlatFormFeature
 const FactLayoutGrid = lazy(() => import("./intersection/FactLayoutGrid"));
 const ClassTemplate = lazy(() => import("./intersection/ClassTemplate"));
 const GridSectionCard = lazy(() => import("./intersection/GridSectionCard"));
+
+// motion
+const MotionHoverCard = lazy(() => import("./motion/MotionHoverCard"));
 
 export  {
     MotionHeroSection,
@@ -88,7 +91,8 @@ export  {
     NumberCountUpLayout,
     NumberCountUpCard,
     GridLayout,
-    HoverCard,
+    ProfileCard,
     GoogleMap,
-    GridSectionCard
+    GridSectionCard,
+    MotionHoverCard
 }

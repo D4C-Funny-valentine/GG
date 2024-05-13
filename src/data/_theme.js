@@ -155,10 +155,22 @@ const CustomThemeProvider = (props) => {
             sky : {
                 main : '#ffffff'
             },
+            navy : {
+                main : mode === 'light' ? '#183167' : '#0F2043'
+            },
+            scarlet: {
+                main : mode === 'light' ? '#ce371f' : '#8F230E'
+            },
+            rose : {
+                main : mode === 'light' ? '#ecb3be' : '#D79FAA'
+            },
+            coal : {
+                main : mode === 'light' ? '#1A1A1A' : '#000000'
+            },
             background: {
                 paper: mode === 'light' ? '#ffffff' : '#222b45',
                 default: mode === 'light' ? '#ffffff' : '#222b45',
-            }
+            },
         },
         components: {
             MuiCssBaseline : {

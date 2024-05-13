@@ -1,5 +1,5 @@
 import React from 'react'
-import { HeadingTextGroup, GridLayout, HoverCard } from "../../../components"
+import { HeadingTextGroup, GridLayout, ProfileCard } from "../../../components"
 import { Box, Grid } from '@mui/material'
 
 
@@ -16,7 +16,7 @@ const AboutUsSection = ({data}) => {
           {
             data.map(person => (
               <Grid key={person.profile} item xs={12} md={6} lg={4}>
-                <HoverCard info={person}/>
+                <ProfileCard info={person}/>
               </Grid>
             ))
           }
