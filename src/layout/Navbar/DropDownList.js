@@ -1,6 +1,8 @@
-import { ClickAwayListener, Grow, MenuItem, MenuList, Paper, Popper, Typography } from '@mui/material';
+import { ClickAwayListener, Grow, MenuItem, MenuList, Paper, Popper, Stack, Typography } from '@mui/material';
 import React from 'react'
 import ActiveNavbarLink from './ActiveNavbarLink';
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 
 const DropDownList = ({navData}) => {
     const [open, setOpen] = React.useState(false);
@@ -36,18 +38,21 @@ const DropDownList = ({navData}) => {
   }, [open]);
   return (
     <div>
+       <Stack direction={'row'} gap={1}>
         <Typography
-            variant="body1"
-            ref={anchorRef}
-            id="composition-button"
-            aria-controls={open ? 'composition-menu' : undefined}
-            aria-expanded={open ? 'true' : undefined}
-            aria-haspopup="true"
-            onClick={handleToggle}
-            style={{cursor: 'pointer'}}
-        >
-          {navData.title}
-        </Typography>
+                variant="body1"
+                ref={anchorRef}
+                id="composition-button"
+                aria-controls={open ? 'composition-menu' : undefined}
+                aria-expanded={open ? 'true' : undefined}
+                aria-haspopup="true"
+                onClick={handleToggle}
+                style={{cursor: 'pointer'}}
+            >
+            {navData.title}
+            </Typography>
+            {open ? <KeyboardArrowUpIcon sx={{pb: 1}} color='inherit'/> : <KeyboardArrowDownIcon sx={{pb: 1}} color='inherit'/>}
+       </Stack>
         <Popper
             open={open}
             anchorEl={anchorRef.current}

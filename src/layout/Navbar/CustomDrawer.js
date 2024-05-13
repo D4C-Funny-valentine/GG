@@ -1,29 +1,30 @@
 import { Accordion, AccordionSummary, Box, Collapse, Drawer, Grid } from '@mui/material'
 import React from 'react'
-import { NavLink } from 'react-router-dom'
-import { useThemeSetting } from '../../redux/features'
+import { NavLink, useNavigate } from 'react-router-dom'
+import { useDrawer, useThemeSetting } from '../../redux/features'
 import { Paragraph, CustomButton } from '../../components'
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
-import { default_navlinks, dropdown_navlinks } from '../../data/_navData'
+import { PATH, navLinks } from '../../data/_navData'
 
-const CustomDrawer = ({open, onClose, isDefault = true}) => {
+const CustomDrawer = ({open}) => {
     const {mode} = useThemeSetting();
+    const {onCloseDrawer} = useDrawer();
 
   return (
-    <Drawer open={open} onClose={onClose} role='presentation'>
+    <Drawer open={open} onClose={onCloseDrawer} role='presentation'>
         <Box sx={{minWidth: 280, width: '100%'}}>
             <Box sx={{p: 2}}>
                 <Box>
                     <Box sx={{py: 2, px: 4}}>
-                        <NavLink to={'/'}>
+                        <NavLink to={'/'} onClick={onCloseDrawer}>
                              <img src={mode === 'light' ? 'https://assets.maccarianagency.com/the-front/logos/logo.svg' : 'https://assets.maccarianagency.com/the-front/logos/logo-negative.svg'} className="logo" alt="logo" style={{maxWidth: '100px', objectFit: 'contain'}} />
                         </NavLink>
                     </Box>
-                    <Box sx={{ p: 4 }}>  
-                        {
-                            isDefault ? <DefaultDrawerNavLink/> : <DropdownDrawerNavLink/>
-                        }
+                    <Box sx={{ py: 4 }}>  
+                    {/* navbar link */}
+                        <DropdownDrawerNavLink/>
+                    {/* button group */}
                         <Box sx={{display: 'flex', flexDirection: 'column', gap: '1rem'}}>
                         <CustomButton variant='outlined'>
                             <Paragraph variant='body1'>Documentation</Paragraph>
@@ -40,23 +41,11 @@ const CustomDrawer = ({open, onClose, isDefault = true}) => {
   )
 }
 
-const DefaultDrawerNavLink = () => {
-    return (
-        <>
-            {
-                default_navlinks.map((item, index) => (
-                    <DrawerItem key={index} item={item}/>
-                ))
-            }
-        </>
-    )
-}
-
 const DropdownDrawerNavLink = () => {
     return (
         <>
             {
-                dropdown_navlinks.map((item, index) => (
+                navLinks.map((item, index) => (
                     <DrawerDropdownItem key={index} item={item}/>
                 ))
             }
@@ -72,40 +61,55 @@ const DrawerDropdownItem = ({item}) => {
     }
     return (
         <Box>
-            <Accordion elevation={0} onChange={toggleHandler}>
-                <AccordionSummary>
-                    <Paragraph variant='body1' sx={{mr: 'auto'}}>{item.title}</Paragraph>
-                    {
-                        collapseOpen ? <KeyboardArrowUpIcon/> : <KeyboardArrowDownIcon/>
-                    }
-                </AccordionSummary>
-               {
-                item.submenu.length > 0 &&  <Collapse in={collapseOpen} timeout="auto" unmountOnExit>
-                <Grid container spacing={0}>
-                    {
-                        item.submenu.map(menu => (
-                        <Grid item xs={12}>
-                            <Box sx={{padding: '4px 5px'}}>
-                                <ActiveNavbarLink key={menu.to} data={menu}/>
-                            </Box>
+            {
+                item?.submenu && item.submenu.length > 0 ? (
+                <Accordion elevation={0} onChange={toggleHandler} sx={{px: 4}}>
+                    <AccordionSummary>
+                        <Paragraph variant={collapseOpen ? 'body1' : 'body2'} sx={{mr: 'auto'}}>{item.title}</Paragraph>
+                        {
+                            collapseOpen ? <KeyboardArrowUpIcon color='inherit'/> : <KeyboardArrowDownIcon color='inherit'/>
+                        }
+                    </AccordionSummary>
+                    <Collapse in={collapseOpen} timeout="auto" unmountOnExit>
+                        <Grid container spacing={0}>
+                            {
+                                item.submenu.map(menu => (
+                                <Grid item xs={12}>
+                                    <Box sx={{padding: '4px 0px'}}>
+                                        <ActiveNavbarLink key={menu.to} data={menu}/>
+                                    </Box>
+                                </Grid>
+                                ))
+                            }
                         </Grid>
-                        ))
-                    }
-                </Grid>
-            </Collapse>
-               }
-            </Accordion>
+                    </Collapse>
+                </Accordion>
+                ) : (
+                    <Box sx={{padding : '4px 5px'}}>
+                        <ActiveNavbarLink data={item}/>
+                    </Box>
+                )
+            }
         </Box>
     )
 }
 
 const ActiveNavbarLink = ({data}) => {
+    const {onCloseDrawer} = useDrawer();
     const [active, setActive] = React.useState(false);
+
+    const navigate = useNavigate();
+
+    const handleNavigation = () => {
+        onCloseDrawer();
+        return data.to === PATH.LANDING.landing ? navigate('/') : navigate(data.to)
+    }
 
     return (
             <NavLink
-                     to={data.to === 'startup' ? '/' : data.to}
-                           className={({ isActive }) => setActive(isActive)}
+                to={data.to === PATH.LANDING.landing ? '/' : data.to}
+                className={({ isActive }) => setActive(isActive)}
+                onClick={handleNavigation}
             >
                 <CustomButton variant='outline' sx={{color: active ? 'primary.main' : '#000', width : '100%', justifyContent : 'start', bgcolor : active ? '#e6f2f82b' : 'transparent' }} size="small">
                     <Paragraph
@@ -119,26 +123,26 @@ const ActiveNavbarLink = ({data}) => {
     )
 }
 
-const DrawerItem = ({item}) => {
-    const [active, setActive] = React.useState(false);
+// const DrawerItem = ({item}) => {
+//     const [active, setActive] = React.useState(false);
    
-    return (
-       <Box sx={{padding : '4px 5px'}}>
-             <NavLink
-                to={item === 'landing' ? '/' : `/${item}`}
-                    className={({ isActive }) => setActive(isActive)}
-            >
-            <CustomButton variant='outline' sx={{color: active ? 'primary.main' : '#000', width : '100%', justifyContent : 'start', bgcolor : active ? '#e6f2f82b' : 'transparent' }} size="small">
-                <Paragraph
-                    variant={active ? 'body1' : 'body2'}
-                    sx={{ cursor: "pointer", textTransform: "capitalize", fontWeight : active ? 700 : 400}}
-                >
-                    {item}
-                </Paragraph>
-            </CustomButton>
-            </NavLink>
-       </Box>
-    )
-} 
+//     return (
+//        <Box sx={{padding : '4px 5px'}}>
+//              <NavLink
+//                 to={item === 'landing' ? '/' : `/${item}`}
+//                     className={({ isActive }) => setActive(isActive)}
+//             >
+//             <CustomButton variant='outline' sx={{color: active ? 'primary.main' : '#000', width : '100%', justifyContent : 'start', bgcolor : active ? '#e6f2f82b' : 'transparent' }} size="small">
+//                 <Paragraph
+//                     variant={active ? 'body1' : 'body2'}
+//                     sx={{ cursor: "pointer", textTransform: "capitalize", fontWeight : active ? 700 : 400}}
+//                 >
+//                     {item}
+//                 </Paragraph>
+//             </CustomButton>
+//             </NavLink>
+//        </Box>
+//     )
+// } 
 
 export default CustomDrawer
