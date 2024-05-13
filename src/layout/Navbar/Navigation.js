@@ -7,7 +7,7 @@ import { useDrawer, useThemeSetting } from "../../redux/features";
 import MenuIcon from '@mui/icons-material/Menu';
 import CustomDrawer from "./CustomDrawer";
 import { useMediaQueryDevice } from "../../hooks";
-import { specialPath } from "../../data/common";
+import { specialPath } from "../../data/_navData";
 
 const Navigation = () => {
   const { pathname } = useLocation();

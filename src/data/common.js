@@ -1,8 +1,5 @@
 import { Email, Phone, FmdGood, Facebook, Instagram, GitHub } from "@mui/icons-material"
 
-const specialPath = ['/', '/pages', '/blog'];
-
-
 const brandLogo = [
     'https://assets.maccarianagency.com/svg/logos/airbnb-original.svg',
     'https://assets.maccarianagency.com/svg/logos/amazon-original.svg',
@@ -195,7 +192,6 @@ const countupRates = [
 ]
 
 export { 
-    specialPath,
     brandLogo,
     aboutUs,
     groupImages,
