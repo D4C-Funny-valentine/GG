@@ -72,7 +72,7 @@ const UpperNavBar = () => {
 
 const LowerNavBar = ({isScroll, tablet, mode}) => {
 
-  const { open, onOpenDrawer, onCloseDrawer } = useDrawer();
+  const { open, onOpenDrawer } = useDrawer();
 
   return  (
     <Toolbar sx={{ justifyContent: "space-between" }} style={{padding: 0}}>
@@ -92,7 +92,7 @@ const LowerNavBar = ({isScroll, tablet, mode}) => {
               <Button onClick={onOpenDrawer} sx={{ minWidth: '40px', minHeight: '40px', p: 0, border : 1, borderRadius: 1, borderColor: mode === 'light' ? 'lightgrey' : 'inherit', '&:hover' : {borderColor: '#377dff'}}}>
                 <MenuIcon/>
               </Button> 
-              <CustomDrawer open={open} onClose={onCloseDrawer}/>
+              <CustomDrawer open={open}/>
           </Box>
          )
       }
