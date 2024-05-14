@@ -1,7 +1,7 @@
 import { Box, InputAdornment } from '@mui/material'
 import React from 'react'
 import NotificationsNoneOutlinedIcon from '@mui/icons-material/NotificationsNoneOutlined';
-import { CustomInput, Heading } from '../../../components';
+import { CustomInput, Heading } from '../../components';
 
 const Subscribe = () => {
   return (

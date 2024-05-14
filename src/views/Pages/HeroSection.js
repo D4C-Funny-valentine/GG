@@ -1,5 +1,5 @@
 import React from 'react'
-import { Heading, MotionHeroSection } from '../../../components'
+import { Heading, MotionHeroSection } from '../../components'
 import { Box } from '@mui/material'
 
 const HeroSection = () => {

@@ -2,7 +2,7 @@ import React, { Suspense } from "react";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import RootLayout from "../layout/_rootLayout";
 import ErrorPage from "../views/ErrorPage";
-import { Landing, Company, Pages, Blog, Portfolio, About, StartUp, Carrer, Basic } from "../views";
+import { Landing, Company, Pages, Blog, Portfolio, About, StartUp, Basic } from "../views";
 import CustomThemeProvider from "../data/_theme";
 import { CssBaseline } from "@mui/material"
 // import { PATH } from "../data/_navData";
@@ -36,28 +36,14 @@ const router = createBrowserRouter([
       },
       {
         path: "/pages",
-        element: <Pages />,
-        children: [
-          {
-            // path: PATH.PAGES.carrer,
-            index: true,
-            element: <Carrer/>
-          }
-        ]
+        element: <Pages />
       },
       {
         path: "/blog",
-        element: <Blog />,
-        // children: [
-        //   {
-        //     // path: PATH.BLOG.reach_view,
-        //     index : true,
-        //     element: <ReachView/>
-        //   }
-        // ]
+        element: <Blog />
       },
       {
-        path: "/basic",
+        path: "/portfolio",
         element: <Portfolio />,
         children: [
           {
