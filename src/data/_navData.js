@@ -7,9 +7,9 @@ const PATH = Object.freeze({
     title: "Company",
     company: "company",
   },
-  PAGES: {
-    title: "Pages",
-    pages: "pages",
+  CARRER: {
+    title: "Carrer",
+    carrer: "carrer",
   },
   BLOG: {
     title: "Blog",
@@ -22,7 +22,7 @@ const PATH = Object.freeze({
 });
 
 
-const specialPath = ['/', '/pages', '/blog', '/portfolio'];
+const specialPath = ['/', '/carrer', '/blog', '/portfolio'];
 
 
 const navLinks = [
@@ -35,8 +35,8 @@ const navLinks = [
     to: PATH.COMPANY.company
   },
   {
-    title : PATH.PAGES.title,
-    to : PATH.PAGES.pages
+    title : PATH.CARRER.title,
+    to : PATH.CARRER.carrer
   },
   {
     title : PATH.BLOG.title,
