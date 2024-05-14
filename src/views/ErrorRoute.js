@@ -8,7 +8,7 @@ const root_main_layout = {
     height: '100vh'
 }
 
-const ErrorPage = () => {
+const ErrorRoute = () => {
   return (
     <Box sx={root_main_layout}> 
             <Box sx={{height: '100%', display:'flex', color:'white', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', gap: '0.5rem', bgcolor: '#2C3E50'}}>
@@ -42,4 +42,4 @@ const ErrorPage = () => {
   )
 }
 
-export default ErrorPage
+export default ErrorRoute
