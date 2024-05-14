@@ -17,13 +17,12 @@ const PATH = Object.freeze({
   },
   PORTFOLIO: {
     title: "Portfolio",
-    basic: "basic",
-    parallax: "parallax",
+    portfolio: "portfolio",
   },
 });
 
 
-const specialPath = ['/', '/pages', '/blog', '/basic'];
+const specialPath = ['/', '/pages', '/blog', '/portfolio'];
 
 
 const navLinks = [
@@ -45,16 +44,7 @@ const navLinks = [
   },
   {
     title : PATH.PORTFOLIO.title,
-    submenu : [
-      {
-        title : 'Basic',
-        to : PATH.PORTFOLIO.basic
-      },
-      {
-        title: 'Parallax',
-        to : PATH.PORTFOLIO.parallax
-      }
-    ]
+    to : PATH.PORTFOLIO.portfolio
   }
 ]
 

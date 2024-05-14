@@ -1,5 +1,5 @@
 import React from 'react'
-import { CustomButton, GridLayout, Heading, MotionHoverCard } from '../../../components'
+import { CustomButton, GridLayout, Heading, MotionHoverCard } from '../../components'
 import { Box, Grid } from '@mui/material'
 
 const ShowCase = ({data}) => {

@@ -1,6 +1,6 @@
 import { Box } from '@mui/material'
 import React from 'react'
-import { Paragraph, Heading } from "../../../components"
+import { Paragraph, Heading } from "../../components"
 import "./about.css"
 
 const HeroSection = () => {

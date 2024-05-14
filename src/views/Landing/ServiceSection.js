@@ -1,6 +1,6 @@
 import { Box } from '@mui/material'
 import React from 'react'
-import { HeadingTextGroup, ServiceGridCardLayout } from '../../../components'
+import { HeadingTextGroup, ServiceGridCardLayout } from '../../components'
 
 /**
  * 

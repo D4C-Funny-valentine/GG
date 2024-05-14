@@ -1,6 +1,6 @@
 import { Box } from '@mui/material'
 import React from 'react'
-import { HeadingTextGroup, ImageListCard, ImageListContainer } from '../../../components';
+import { HeadingTextGroup, ImageListCard, ImageListContainer } from '../../components';
 
 const GroupPhotoSection = ({data}) => {
   return (

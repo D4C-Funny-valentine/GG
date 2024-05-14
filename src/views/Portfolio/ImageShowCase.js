@@ -1,5 +1,5 @@
 import React from 'react'
-import { ImageListCard, ImageListContainer } from '../../../components'
+import { ImageListCard, ImageListContainer } from '../../components'
 
 const ImageShowCase = ({data}) => {
   return (
