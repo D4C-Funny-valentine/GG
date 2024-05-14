@@ -41,18 +41,18 @@ const AppRoute = () => {
   return (
     <Suspense
     fallback={
-      <div style={{ height: "100vh", backgroundColor: "white" }}>Loading.....</div>
+      <div style={{ height: "100vh", backgroundColor: "white" }}/>
     }
     >
           <CustomThemeProvider>
             <CssBaseline/>
             <RouterProvider
                 router={router}
-                fallbackElement={
-                  <div>
-                    <h1>Fallback element</h1>
-                  </div>
-                }
+                // fallbackElement={
+                //   <div>
+                //     <h1>Fallback element</h1>
+                //   </div>
+                // }
             />
           </CustomThemeProvider> 
     </Suspense>
