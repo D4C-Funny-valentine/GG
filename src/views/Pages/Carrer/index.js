@@ -1,11 +1,11 @@
 import React from 'react'
 import { Box, Container} from '@mui/material'
 import HeroSection from './HeroSection'
-import { GridSectionCard } from '../../../components'
-import UsagePattern from './UsagePattern'
-import { jobLists, usage_patterns } from '../../../data/carrer'
+import { GridSectionCard, UsagePattern } from '../../../components'
+import { jobLists } from '../../../data/carrer'
 import ApplyJobSection from './ApplyJobSection'
 import Subscribe from './Subscribe'
+import { usage_patterns } from '../../../data/common'
 
 const Carrer = () => {
   const padding = { xs: 8, md: 12 };
@@ -27,7 +27,7 @@ const Carrer = () => {
            </Box>
           {/* Monitor and analyze */}
            <Box sx={{pb: padding}}>
-              <UsagePattern data={usage_patterns}/>
+              <UsagePattern data={usage_patterns} url={'https://assets.maccarianagency.com/backgrounds/img21.jpg'}/>
            </Box>
         </Container>
 

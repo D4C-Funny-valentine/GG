@@ -191,7 +191,23 @@ const countupRates = [
     }
 ]
 
+const usage_patterns = [
+    {
+        title : 'Affordable, scalable and performant. The perfect solution for small apps.'
+    },
+    {
+        title : 'A mid-sized solution for businesses undergoing rapid user growth.'
+    },
+    {
+        title : "A farm of machines entirely dedicated to your company's storage needs."
+    },
+    {
+        title : 'A mid-sized solution for businesses undergoing rapid user growth.'
+    }
+]
+
 export { 
+    usage_patterns,
     brandLogo,
     aboutUs,
     groupImages,

@@ -3,7 +3,10 @@ import { Box, Container, useTheme} from '@mui/material'
 import HeroSection from './HeroSection';
 import ShowCase from './ShowCase';
 import ServicesSection from './ServicesSection';
-import { showCases } from '../../../data/_portfolio';
+import { imageShowCase, showCases } from '../../../data/_portfolio';
+import { UsagePattern } from '../../../components';
+import { usage_patterns } from '../../../data/common';
+import ImageShowCase from './ImageShowCase';
 
 const Basic = () => {
   const theme  = useTheme();
@@ -23,6 +26,22 @@ const Basic = () => {
             <ServicesSection/>
         </Container>
       </Box>
+
+      <Box sx={{bgcolor: 'primary.main'}}>
+        <Container maxWidth="lg" sx={{py: padding}}>
+            <UsagePattern 
+              data={usage_patterns} 
+              url={'https://assets.maccarianagency.com/svg/illustrations/drawkit-illustration2.svg'}
+              descriptionVariant='h6'
+              headingStyle={{color: 'white'}}
+              factSpacing={1}
+            />
+        </Container>
+      </Box>
+
+      <Container maxWidth="lg" sx={{py: padding}}>
+        <ImageShowCase data={imageShowCase}/>
+      </Container>
     </Box>
   )
 }

@@ -14,7 +14,7 @@ const GroupPhotoSection = ({data}) => {
         <ImageListContainer>
             {
                 data.map(image => (
-                   <ImageListCard data={image} key={image.img}/>
+                   <ImageListCard key={image.img} url={image.img} cols={image.cols}/>
                 ))
             }
         </ImageListContainer>

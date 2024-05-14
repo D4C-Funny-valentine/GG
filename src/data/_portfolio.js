@@ -1,7 +1,6 @@
 import TipsAndUpdatesOutlinedIcon from '@mui/icons-material/TipsAndUpdatesOutlined';
 import DevicesOutlinedIcon from '@mui/icons-material/DevicesOutlined';
 import PersonalVideoOutlinedIcon from '@mui/icons-material/PersonalVideoOutlined';
-import CastForEducationOutlinedIcon from '@mui/icons-material/CastForEducationOutlined';
 import HttpOutlinedIcon from '@mui/icons-material/HttpOutlined';
 
 const showCases = (theme) => {  
@@ -57,7 +56,27 @@ const developmentServices = [
     }
 ]
 
+const imageShowCase = [
+    {
+        url : 'https://assets.maccarianagency.com/backgrounds/img5.jpg',
+        cols : 2
+    },
+    {
+        url : 'https://assets.maccarianagency.com/backgrounds/img6.jpg',
+        cols: 1
+    },
+    {
+        url : 'https://assets.maccarianagency.com/backgrounds/img7.jpg',
+        cols: 1
+    },
+    {
+        url : 'https://assets.maccarianagency.com/backgrounds/img10.jpg',
+        cols : 2
+    }
+]
+
 export {
     showCases,
-    developmentServices
+    developmentServices,
+    imageShowCase
 }

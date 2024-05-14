@@ -7,13 +7,14 @@ import FactBox from '../common/FactBox';
  * 
  * @param {object} props - Component props
  * @param {Array} props.data - Data to loop for the DevPlatform. (data must contain title);
+ * @param {number} props.spacing - Spacing between each fact.
  * @param {object} props.sx - Additional Style for the FactLayout child
  * @returns {React.ReactElement}
  */
 
-const FactLayoutGrid = ({data, sx={}, ...props}) => {
+const FactLayoutGrid = ({data, spacing=0, sx={}, ...props}) => {
     return (
-      <Grid container spacing={0} sx={{mt: 1}}>
+      <Grid container spacing={spacing} sx={{mt: 1}}>
         {
           data.map((platform, index) => (
             <Grid item key={platform.title + index} {...props} sx={{...sx}}>
