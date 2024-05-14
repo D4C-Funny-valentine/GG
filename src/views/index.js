@@ -5,7 +5,6 @@ import Pages from "./Pages"
 import Blog from "./Blog"
 import Portfolio from "./Portfolio"
 
-const StartUp = lazy(() => import("./Landing/StartUp"))
 const About = lazy(() => import("./Company/About"))
 const Basic  = lazy(() => import("./Portfolio/Basic"))
 
@@ -17,8 +16,6 @@ export {
     Blog,
     Portfolio,
 
-    // child
-    StartUp,
     About,
     Basic
 }

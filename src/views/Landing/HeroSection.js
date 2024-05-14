@@ -1,10 +1,10 @@
 import React from 'react'
 import { Box, Paper, Container } from "@mui/material";
-import { Heading, CustomButton, CustomInput } from '../../../components';
+import { Heading, CustomButton, CustomInput } from '../../components';
 import Marquee from 'react-fast-marquee';
-import { useThemeSetting } from '../../../redux/features';
-import { brandLogo } from '../../../data/common';
-import { useMediaQueryDevice } from '../../../hooks';
+import { useThemeSetting } from '../../redux/features';
+import { brandLogo } from '../../data/common';
+import { useMediaQueryDevice } from '../../hooks';
 
 const hero_section_container = {
     display: 'flex',

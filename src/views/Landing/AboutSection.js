@@ -1,6 +1,6 @@
 import { Box } from '@mui/material'
 import React from 'react'
-import { CarouselCard, CustomCarousel, Heading, HeadingTextGroup, Paragraph } from "../../../components"
+import { CarouselCard, CustomCarousel, Heading, HeadingTextGroup, Paragraph } from "../../components"
 
 const AboutSection = ({data}) => {
   return (
