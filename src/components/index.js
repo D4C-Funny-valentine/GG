@@ -1,101 +1,54 @@
-// urgent components
-import { lazy } from "react"
-import NavbarLogo from "./UI/logo/NavbarLogo"
-import MotionHeroSection from "./motion/MotionHeroSection";
-
 // lazy comoponents
 
 // UI
-    // buttons
-const CustomButton = lazy(() => import("./UI/buttons/CustomButton"));
-const ThemeSwitchIconButton = lazy(() => import("./UI/buttons/ThemeSwitchIconButton"));
+const CustomButton = lazy(() => import("./ui/CustomButton"));
+const CustomChip = lazy(() => import("./ui/CustomChip"));
+const ThemeSwitchIconButton = lazy(() => import('./ui/ThemeSwitchIconButton'));
 
-    // texts
-const Heading = lazy(() => import("./UI/texts/Heading"));
-const Paragraph = lazy(() => import("./UI/texts/Paragraph"));
+const Heading = lazy(() => import("./ui/Heading"));
+const Paragraph = lazy(() => import("./ui/Paragraph"));
 
-    // textinputs
-const CustomInput = lazy(() => import("./UI/textinputs/CustomInput"));
-
-    // logo
-const BrandLogo = lazy(() => import("./UI/logo/BrandLogo"));
-const BrandLogoShowCase = lazy(() => import("./UI/logo/BrandLogoShowCase"));
-
-    // wrapper
-const CustomCarousel = lazy(() => import("./UI/wrapper/CustomCarousel"));
-
-    // customize
-const CustomAccordion = lazy(() => import("./UI/customized/CustomAccordion"));
-const CustomListItem = lazy(() => import("./UI/customized/CustomListItem"));
-const CustomPaperCard = lazy(() => import("./UI/customized/CustomPaperCard"));
+const CustomInput = lazy(() => import("./ui/CustomInput"));
 
 // common
-const HeadingTextGroup = lazy(() => import("./common/HeadingTextGroup"));
-const ServiceGridCardLayout = lazy(() => import("./common/ServiceGridCardLayout"));
-const ServiceGridCard = lazy(() => import("./common/ServiceGridCard"));
-
-const DynamicGridContainer = lazy(() => import("./common/DynamicGridContainer"));
-
-const FactBox = lazy(() => import("./common/FactBox"));
-
+const CustomCarousel = lazy(() => import("./common/CustomCarousel"));
 const CarouselCard = lazy(() => import("./common/CarouselCard"));
-
+const CustomPaperCard = lazy(() => import("./common/CustomPaperCard"));
+const HeadingTextGroup = lazy(() => import("./common/HeadingTextGroup"));
+const DynamicGridContainer = lazy(() => import("./common/DynamicGridContainer"));
+const FactBox = lazy(() => import("./common/FactBox"));
 const ImageListContainer = lazy(() => import("./common/ImageListContainer"));
 const ImageListCard = lazy(() => import("./common/ImageListCard"));
-
 const CountOnScrollNumber = lazy(() => import("./common/CountOnScrollNumber"));
 const NumberCountUpCard = lazy(() => import("./common/NumberCountUpCard"));
 const NumberCountUpLayout = lazy(() => import("./common/NumberCountUpLayout"));
-
 const GridLayout = lazy(() => import("./common/GridLayout"));
-const ProfileCard = lazy(() => import("./common/ProfileCard"));
-
 const GoogleMap = lazy(() => import("./common/GoogleMap"));
 
-const UsagePattern = lazy(() => import("./common/UsagePattern"));
-
-// intersection 
-const DevPlatFormFeatures = lazy(() => import("./intersection/DevPlatFormFeatures"));
-const FactLayoutGrid = lazy(() => import("./intersection/FactLayoutGrid"));
-const ClassTemplate = lazy(() => import("./intersection/ClassTemplate"));
-const GridSectionCard = lazy(() => import("./intersection/GridSectionCard"));
-
 // motion
+const MotionHeroSection = lazy(() => import("./motion/MotionHeroSection"));
 const MotionHoverCard = lazy(() => import("./motion/MotionHoverCard"));
 
 export  {
     MotionHeroSection,
-    NavbarLogo,
-    // lazy
     CustomButton,
+    CustomChip,
     ThemeSwitchIconButton,
-    BrandLogo,
-    BrandLogoShowCase,
     Heading,
     Paragraph,
     CustomInput,
-    CustomAccordion,
     CustomPaperCard,
-    CustomListItem,
     CustomCarousel,
     HeadingTextGroup,
-    ServiceGridCardLayout,
-    ServiceGridCard,
-    FactLayoutGrid,
-    UsagePattern,
-    DevPlatFormFeatures,
     CarouselCard,
     DynamicGridContainer,
     FactBox,
-    ClassTemplate,
     ImageListCard,
     ImageListContainer,
     CountOnScrollNumber,
     NumberCountUpLayout,
     NumberCountUpCard,
     GridLayout,
-    ProfileCard,
     GoogleMap,
-    GridSectionCard,
     MotionHoverCard
 }

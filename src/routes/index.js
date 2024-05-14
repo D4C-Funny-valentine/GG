@@ -1,36 +1,42 @@
 import React, { Suspense } from "react";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import RootLayout from "../layout/_rootLayout";
+import LandingWebsite from "../pages/CompanyLandingWebsite";
 import ErrorRoute from "../views/ErrorRoute";
-import { Landing, Company, Pages, Blog, Portfolio } from "../views";
-import CustomThemeProvider from "../data/_theme";
-import { CssBaseline } from "@mui/material"
+import { Landing, Company, Carrer, Blog, Portfolio } from "../pages/CompanyLandingWebsite/screens";
+import { MotionHeroSection } from "../pages/CompanyLandingWebsite/components";
 // import { PATH } from "../data/_navData";
 
 const router = createBrowserRouter([
   {
-    path: "/",
-    element: <RootLayout />,
+    path: '/',
+    element: <div>
+      <MotionHeroSection style={{height: '100vh'}} url="https://assets.maccarianagency.com/backgrounds/img44.jpg"/>
+    </div>,
+    errorElement: <ErrorRoute />,
+  },
+  {
+    path: "/landing",
+    element: <LandingWebsite />,
     errorElement: <ErrorRoute />,
     children: [
       {
-        path: '/',
-        element: <Landing/>
+        index: true,
+        element:  <Landing />,
       },
       {
-        path: "/company",
+        path: "company",
         element: <Company/>,
       },
       {
-        path: "/pages",
-        element: <Pages />
+        path: "carrer",
+        element: <Carrer />
       },
       {
-        path: "/blog",
+        path: "blog",
         element: <Blog />
       },
       {
-        path: "/portfolio",
+        path: "portfolio",
         element: <Portfolio />
       },
     ],
@@ -44,8 +50,6 @@ const AppRoute = () => {
       <div style={{ height: "100vh", backgroundColor: "white" }}/>
     }
     >
-          <CustomThemeProvider>
-            <CssBaseline/>
             <RouterProvider
                 router={router}
                 // fallbackElement={
@@ -54,7 +58,6 @@ const AppRoute = () => {
                 //   </div>
                 // }
             />
-          </CustomThemeProvider> 
     </Suspense>
   );
 };
