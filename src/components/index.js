@@ -52,6 +52,8 @@ const ProfileCard = lazy(() => import("./common/ProfileCard"));
 
 const GoogleMap = lazy(() => import("./common/GoogleMap"));
 
+const UsagePattern = lazy(() => import("./common/UsagePattern"));
+
 // intersection 
 const DevPlatFormFeatures = lazy(() => import("./intersection/DevPlatFormFeatures"));
 const FactLayoutGrid = lazy(() => import("./intersection/FactLayoutGrid"));
@@ -80,6 +82,7 @@ export  {
     ServiceGridCardLayout,
     ServiceGridCard,
     FactLayoutGrid,
+    UsagePattern,
     DevPlatFormFeatures,
     CarouselCard,
     DynamicGridContainer,

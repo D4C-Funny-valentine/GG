@@ -17,7 +17,7 @@ const ImageListContainer = ({sx = {}, cols = 3, rowHeight = 300, children}) => {
     const { tablet } = useMediaQueryDevice();
   return (
     <Box sx={{...sx}}>
-      <ImageList cols={cols} gap={tablet ? 16 : 4} rowHeight={tablet ? rowHeight : (rowHeight - 100)} sx={{ gridTemplateColumns: 'repeat(3, 1fr)' }}>
+      <ImageList cols={cols} gap={tablet ? 16 : 4} rowHeight={tablet ? rowHeight : (rowHeight - 100)} sx={{ gridTemplateColumns: `repeat(${cols}, 1fr)` }}>
        {children}
       </ImageList>
     </Box>
