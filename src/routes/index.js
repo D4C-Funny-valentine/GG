@@ -1,7 +1,7 @@
 import React, { Suspense } from "react";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import RootLayout from "../layout/_rootLayout";
-import ErrorPage from "../views/ErrorPage";
+import ErrorRoute from "../views/ErrorRoute";
 import { Landing, Company, Pages, Blog, Portfolio } from "../views";
 import CustomThemeProvider from "../data/_theme";
 import { CssBaseline } from "@mui/material"
@@ -11,7 +11,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <RootLayout />,
-    errorElement: <ErrorPage />,
+    errorElement: <ErrorRoute />,
     children: [
       {
         path: '/',
