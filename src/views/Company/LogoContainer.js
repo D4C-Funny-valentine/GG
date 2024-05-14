@@ -1,6 +1,6 @@
 import { Box } from '@mui/material'
 import React from 'react'
-import { BrandLogo } from '../../../components'
+import { BrandLogo } from '../../components'
 
 const LogoContainer = ({data}) => {
   return (

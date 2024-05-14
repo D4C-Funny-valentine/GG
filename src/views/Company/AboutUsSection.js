@@ -1,5 +1,5 @@
 import React from 'react'
-import { HeadingTextGroup, GridLayout, ProfileCard } from "../../../components"
+import { HeadingTextGroup, GridLayout, ProfileCard } from "../../components"
 import { Box, Grid } from '@mui/material'
 
 

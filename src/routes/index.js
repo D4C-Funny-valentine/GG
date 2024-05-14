@@ -2,7 +2,7 @@ import React, { Suspense } from "react";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import RootLayout from "../layout/_rootLayout";
 import ErrorPage from "../views/ErrorPage";
-import { Landing, Company, Pages, Blog, Portfolio, About, Basic } from "../views";
+import { Landing, Company, Pages, Blog, Portfolio } from "../views";
 import CustomThemeProvider from "../data/_theme";
 import { CssBaseline } from "@mui/material"
 // import { PATH } from "../data/_navData";
@@ -20,13 +20,6 @@ const router = createBrowserRouter([
       {
         path: "/company",
         element: <Company/>,
-        children: [
-          {
-            // path: PATH.COMPANY.about,
-            index: true,
-            element: <About/>
-          }
-        ]
       },
       {
         path: "/pages",
@@ -38,14 +31,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/portfolio",
-        element: <Portfolio />,
-        children: [
-          {
-            // path: PATH.PORTFOLIO.basic,
-            index: true,
-            element: <Basic/>
-          }
-        ]
+        element: <Portfolio />
       },
     ],
   },

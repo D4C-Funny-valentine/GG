@@ -1,6 +1,6 @@
 import React from 'react'
-import { useThemeSetting } from '../../../redux/features'
-import { Heading, MotionHeroSection } from '../../../components';
+import { useThemeSetting } from '../../redux/features'
+import { Heading, MotionHeroSection } from '../../components';
 import { Box } from '@mui/material';
 
 const HeroSection = () => {
