@@ -9,28 +9,33 @@ import { CssBaseline } from "@mui/material"
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: '/',
+    element: <div>Hello</div>,
+    errorElement: <ErrorRoute />,
+  },
+  {
+    path: "/landing",
     element: <RootLayout />,
     errorElement: <ErrorRoute />,
     children: [
       {
-        path: '/',
-        element: <Landing/>
+        index: true,
+        element:  <Landing />,
       },
       {
-        path: "/company",
+        path: "company",
         element: <Company/>,
       },
       {
-        path: "/carrer",
+        path: "carrer",
         element: <Carrer />
       },
       {
-        path: "/blog",
+        path: "blog",
         element: <Blog />
       },
       {
-        path: "/portfolio",
+        path: "portfolio",
         element: <Portfolio />
       },
     ],
