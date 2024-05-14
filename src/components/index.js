@@ -1,5 +1,4 @@
 // lazy comoponents
-
 // UI
 const CustomButton = lazy(() => import("./ui/CustomButton"));
 const CustomChip = lazy(() => import("./ui/CustomChip"));
@@ -20,8 +19,6 @@ const FactBox = lazy(() => import("./common/FactBox"));
 const ImageListContainer = lazy(() => import("./common/ImageListContainer"));
 const ImageListCard = lazy(() => import("./common/ImageListCard"));
 const CountOnScrollNumber = lazy(() => import("./common/CountOnScrollNumber"));
-const NumberCountUpCard = lazy(() => import("./common/NumberCountUpCard"));
-const NumberCountUpLayout = lazy(() => import("./common/NumberCountUpLayout"));
 const GridLayout = lazy(() => import("./common/GridLayout"));
 const GoogleMap = lazy(() => import("./common/GoogleMap"));
 
@@ -46,8 +43,6 @@ export  {
     ImageListCard,
     ImageListContainer,
     CountOnScrollNumber,
-    NumberCountUpLayout,
-    NumberCountUpCard,
     GridLayout,
     GoogleMap,
     MotionHoverCard

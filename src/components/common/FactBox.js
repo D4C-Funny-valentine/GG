@@ -1,7 +1,7 @@
 import { Box } from '@mui/material'
 import React from 'react'
-import { Paragraph } from '../UI'
-
+import { Paragraph } from '../ui'
+ 
 /**
  * 
  * @param {object} props - Component properties.

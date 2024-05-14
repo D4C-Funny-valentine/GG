@@ -1,5 +1,5 @@
 import React from 'react'
-import CountOnScrollNumber from './CountOnScrollNumber'
+import CountOnScrollNumber from '../../../../components/common/CountOnScrollNumber'
 import { Grid } from '@mui/material'
 import { Paragraph } from '../UI'
 
