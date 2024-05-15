@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+      "baseUrl": "src",
+      "paths": {
+        "@globalComponents/*": ["globalComponents/*"],
+        "@globalComponents/ui/*": ["globalComponents/ui/*"],
+        "@globalComponents/common/*": ["globalComponents/common/*"],
+        "@globalComponents/motion/*": ["globalComponents/motion/*"],
+        "@hooks/*": ["hooks/*"],
+        "@utils/*": ["utils/*"]
+      }
+    },
+    "include": ["src"]
+  }
+  
