@@ -1,5 +1,5 @@
 import React from 'react'
-import { useThemeSetting } from '../../../features';
+import { useThemeSetting } from '../features';
 
 
 const BrandLogo = ({src, alt, className, maxWidth, objectFit = 'contain', ...props }) => {

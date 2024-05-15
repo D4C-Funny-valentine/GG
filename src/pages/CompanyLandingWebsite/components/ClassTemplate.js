@@ -1,7 +1,8 @@
 import { Box, Grid, Paper } from '@mui/material'
 import React from 'react'
-import { Paragraph, Heading, BrandLogo } from '../UI'
-import { useMediaQueryDevice } from '../../../../hooks'
+import { Heading, Paragraph } from '../../../globalComponents';
+import { useMediaQueryDevice } from '../../../hooks';
+import BrandLogo from './BrandLogo';
 
 /**
  * 

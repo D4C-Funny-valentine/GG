@@ -1,6 +1,6 @@
 import { Avatar, Card, CardContent, CardHeader, Grid } from '@mui/material'
 import React from 'react'
-import { Heading, Paragraph } from '../UI'
+import { Heading, Paragraph } from '../../../globalComponents'
 
 /**
  * A component that renders a single card within a grid layout.

@@ -1,8 +1,7 @@
 import React from 'react'
 import { Box, Grid } from '@mui/material'
-import GridLayout from './GridLayout'
-import HeadingTextGroup from './HeadingTextGroup'
-import FactLayoutGrid from '../intersection/FactLayoutGrid'
+import FactLayoutGrid from './FactLayoutGrid'
+import { GridLayout, HeadingTextGroup } from '../../../globalComponents'
 
 const UsagePattern = ({data, url, factSpacing, descriptionVariant = 'h7', headingStyle = {}}) => {
   return (

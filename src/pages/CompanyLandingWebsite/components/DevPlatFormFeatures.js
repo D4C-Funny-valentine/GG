@@ -1,6 +1,6 @@
 import { Box, Grid, Paper } from '@mui/material'
 import React from 'react'
-import { Paragraph, Heading, CustomButton } from '../UI'
+import { Paragraph, Heading, CustomButton } from '../../../globalComponents'
 import FactLayoutGrid from './FactLayoutGrid'
 
 const DevPlatformFeatures = ({data}) => {

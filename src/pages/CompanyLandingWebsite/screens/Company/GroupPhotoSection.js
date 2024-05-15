@@ -1,6 +1,6 @@
 import { Box } from '@mui/material'
 import React from 'react'
-import { HeadingTextGroup, ImageListCard, ImageListContainer } from '../../components';
+import { HeadingTextGroup, ImageList, ImageListContainer } from '../../../../globalComponents';
 
 const GroupPhotoSection = ({data}) => {
   return (
@@ -14,7 +14,7 @@ const GroupPhotoSection = ({data}) => {
         <ImageListContainer>
             {
                 data.map(image => (
-                   <ImageListCard key={image.img} url={image.img} cols={image.cols}/>
+                   <ImageList key={image.img} url={image.img} cols={image.cols}/>
                 ))
             }
         </ImageListContainer>

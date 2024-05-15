@@ -1,7 +1,8 @@
 import { Box, Stack } from '@mui/material'
 import React from 'react'
-import { CustomButton, GridLayout, Heading, HeadingTextGroup, ServiceGridCard } from '../../components'
+import { CustomButton, GridLayout, Heading, HeadingTextGroup } from '../../../../globalComponents'
 import { developmentServices } from '../../data/_portfolio'
+import { ServiceGridCard } from '../../components'
 
 const ServicesSection = () => {
   return (

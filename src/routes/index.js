@@ -3,15 +3,12 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import LandingWebsite from "../pages/CompanyLandingWebsite";
 import ErrorRoute from "../views/ErrorRoute";
 import { Landing, Company, Carrer, Blog, Portfolio } from "../pages/CompanyLandingWebsite/screens";
-import { MotionHeroSection } from "../pages/CompanyLandingWebsite/components";
 // import { PATH } from "../data/_navData";
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <div>
-      <MotionHeroSection style={{height: '100vh'}} url="https://assets.maccarianagency.com/backgrounds/img44.jpg"/>
-    </div>,
+    element: <div>Hello world</div>,
     errorElement: <ErrorRoute />,
   },
   {

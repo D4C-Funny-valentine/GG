@@ -1,6 +1,6 @@
 import { Box, Container } from '@mui/material'
 import React from 'react'
-import { CustomButton, CustomInput, HeadingTextGroup } from '../../components'
+import { CustomButton, CustomInput, HeadingTextGroup } from '../../../../globalComponents'
 
 const Subscription = () => {
   return (

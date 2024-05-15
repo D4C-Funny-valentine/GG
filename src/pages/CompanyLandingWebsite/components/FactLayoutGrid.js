@@ -1,7 +1,7 @@
 import { Grid } from '@mui/material'
 import React from 'react'
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
-import FactBox from '../common/FactBox';
+import {FactBox} from '../../../globalComponents';
 
 /**
  * 

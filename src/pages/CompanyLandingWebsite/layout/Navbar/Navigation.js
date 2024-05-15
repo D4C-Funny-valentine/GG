@@ -1,6 +1,6 @@
 import React from "react";
 import { AppBar, Toolbar, Box, Container, Button, Typography } from "@mui/material";
-import { NavbarLogo, ThemeSwitchIconButton } from "../../components"
+import { ThemeSwitchIconButton } from "../../../../globalComponents"
 import CustomLink from "./CustomLink";
 import { useLocation } from "react-router-dom";
 import MenuIcon from '@mui/icons-material/Menu';
@@ -8,6 +8,7 @@ import CustomDrawer from "./CustomDrawer";
 import { useMediaQueryDevice } from "../../../../hooks";
 import { specialPath } from "../../data/_navData";
 import { useDrawer, useThemeSetting } from "../../features";
+import { NavbarLogo } from "../../components";
 
 const Navigation = () => {
   const { pathname } = useLocation();

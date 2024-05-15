@@ -1,6 +1,6 @@
 import { Box, Stack } from '@mui/material'
 import React from 'react'
-import { CustomButton, DynamicGridContainer, GridLayout, CustomChip, Heading, HeadingTextGroup, Paragraph } from '../../components'
+import { CustomButton, DynamicGridContainer, GridLayout, CustomChip, Heading, HeadingTextGroup, Paragraph } from '../../../../globalComponents'
 import { formatDate } from '../../../../utils/dateUtils'
 import TrendingFlatIcon from '@mui/icons-material/TrendingFlat';
 

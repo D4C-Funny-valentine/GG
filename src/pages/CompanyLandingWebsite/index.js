@@ -6,18 +6,13 @@ import { Outlet } from 'react-router-dom'
 import { Provider } from "react-redux";
 import { store } from "./store";
 import CustomThemeProvider from "./config/_theme";
- 
-
-const root_main_layout = {
-    // minHeight: '100vh'
-}
 
 const LandingWebsite = ({children}) => {
       return (
         <Provider store={store}>
             <CustomThemeProvider>
                 <CssBaseline/>
-                <Box sx={root_main_layout}> 
+                <Box> 
                     <Navigation/>
                         {children}
                         <Outlet/>

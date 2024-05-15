@@ -1,6 +1,6 @@
 import React from 'react'
 import { useThemeSetting } from '../../features'
-import { Heading, MotionHeroSection } from '../../components';
+import { Heading, MotionHeroSection } from '../../../../globalComponents';
 import { Box } from '@mui/material';
 
 const HeroSection = () => {

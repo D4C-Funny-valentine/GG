@@ -1,6 +1,6 @@
 import { Avatar, Box, Divider, Stack } from '@mui/material'
 import React from 'react'
-import { CarouselCard, CustomButton, CustomCarousel, Heading, Paragraph } from '../../components'
+import { CarouselCard, CustomButton, CustomCarousel, Heading, Paragraph } from '../../../../globalComponents'
 import { hoverCardTranslate } from '../../../../utils/helperStyle'
 import { formatDate } from '../../../../utils/dateUtils'
 

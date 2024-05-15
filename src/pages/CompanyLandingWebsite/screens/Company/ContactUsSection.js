@@ -1,6 +1,6 @@
 import { Avatar, Box, Container, Grid, List, ListItem } from '@mui/material'
 import React from 'react'
-import { Paragraph, Heading, GoogleMap } from '../../components'
+import { Paragraph, Heading, GoogleMap } from '../../../../globalComponents'
 import { contact } from '../../data/common'
 
 const ContactUsSection = () => {

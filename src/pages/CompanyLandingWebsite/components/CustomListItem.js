@@ -1,8 +1,8 @@
 import React from 'react'
 import { Box, Breadcrumbs } from '@mui/material';
-import { Heading, Paragraph } from '../../../../../components';
-import { useThemeSetting } from '../../../features';
-import { cardBorderColor, hoverBoxShadowStyle } from '../../../../../utils/helperStyle';
+import { Heading, Paragraph } from '../../../globalComponents';
+import { cardBorderColor, hoverBoxShadowStyle } from '../../../utils/helperStyle';
+import { useThemeSetting } from '../features';
 
 const CustomListItem = ({ sx ={}, heading, location, jobType, linkIcon}) => {
     const {mode} = useThemeSetting();

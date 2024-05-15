@@ -1,7 +1,7 @@
 import { Accordion, AccordionDetails, AccordionSummary } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import React from 'react'
-import Heading from '../../../../../components/ui/Heading';
+import { Heading } from '../../../globalComponents';
 
 const CustomAccordion = ({sx, heading, headingVariant = 'h6', index, additonalComponent, children}) => {
     const [expand, setExpand] = React.useState(false);

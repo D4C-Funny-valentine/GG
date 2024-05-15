@@ -1,6 +1,6 @@
 import React from 'react'
 import { Box, Paper, Container } from "@mui/material";
-import { Heading, CustomButton, CustomInput } from '../../components';
+import { Heading, CustomButton, CustomInput } from '../../../../globalComponents';
 import Marquee from 'react-fast-marquee';
 import { useThemeSetting } from '../../features';
 import { brandLogo } from '../../data/common';

@@ -1,6 +1,6 @@
 import { Box, Grid, Stack } from '@mui/material'
 import React from 'react'
-import { CustomButton, CustomPaperCard, CustomChip, DynamicGridContainer, GridLayout, Heading, Paragraph } from '../../components'
+import { CustomButton, CustomPaperCard, CustomChip, DynamicGridContainer, GridLayout, Heading, Paragraph } from '../../../../globalComponents'
 import { formatDate } from '../../../../utils/dateUtils'
 import { cardBorderColor, hoverCardTranslate } from '../../../../utils/helperStyle'
 import { useThemeSetting } from '../../features'

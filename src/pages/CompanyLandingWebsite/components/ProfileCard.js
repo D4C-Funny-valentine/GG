@@ -1,5 +1,5 @@
 import React from 'react'
-import { Paragraph, Heading } from "../UI"
+import { Paragraph, Heading } from "../../../globalComponents"
 import { Box, Link, Paper } from '@mui/material'
 
 /**

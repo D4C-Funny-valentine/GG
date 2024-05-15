@@ -1,12 +1,12 @@
 import React from 'react'
-import { ImageListCard, ImageListContainer } from '../../components'
+import { ImageList, ImageListContainer } from '../../../../globalComponents'
 
 const ImageShowCase = ({data}) => {
   return (
     <ImageListContainer>
         {
             data.map(item => (
-                <ImageListCard key={item.url} url={item.url} cols={item.cols}/>
+                <ImageList key={item.url} url={item.url} cols={item.cols}/>
             ))
         }
     </ImageListContainer>

@@ -1,7 +1,7 @@
 import { Accordion, AccordionSummary, Box, Collapse, Drawer, Grid } from '@mui/material'
 import React from 'react'
 import { NavLink, useNavigate } from 'react-router-dom'
-import { Paragraph, CustomButton } from '../../components'
+import { Paragraph, CustomButton } from '../../../../globalComponents'
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import { PATH, navLinks } from '../../data/_navData'

@@ -1,6 +1,6 @@
 import { Box, Grid } from '@mui/material'
 import React from 'react'
-import { CustomButton, CustomInput, DynamicGridContainer, GridLayout, Heading, Paragraph } from '../../components'
+import { CustomButton, CustomInput, DynamicGridContainer, GridLayout, Heading, Paragraph } from '../../../../globalComponents'
 import { formatDate } from '../../../../utils/dateUtils'
 import TrendingFlatIcon from "@mui/icons-material/TrendingFlat"
 import { cardBorderColor } from '../../../../utils/helperStyle'

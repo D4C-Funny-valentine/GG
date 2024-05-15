@@ -1,5 +1,5 @@
 import React from 'react'
-import { CustomButton, CustomListItem, GridLayout, HeadingTextGroup } from '../../components'
+import { CustomButton, CustomListItem, GridLayout, HeadingTextGroup } from '../../../../components'
 import TrendingFlatIcon from '@mui/icons-material/TrendingFlat';
 import { Box, Grid } from '@mui/material';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';

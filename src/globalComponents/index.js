@@ -1,4 +1,6 @@
 // lazy comoponents
+import { lazy } from "react";
+
 // UI
 const CustomButton = lazy(() => import("./ui/CustomButton"));
 const CustomChip = lazy(() => import("./ui/CustomChip"));
@@ -17,7 +19,7 @@ const HeadingTextGroup = lazy(() => import("./common/HeadingTextGroup"));
 const DynamicGridContainer = lazy(() => import("./common/DynamicGridContainer"));
 const FactBox = lazy(() => import("./common/FactBox"));
 const ImageListContainer = lazy(() => import("./common/ImageListContainer"));
-const ImageListCard = lazy(() => import("./common/ImageListCard"));
+const ImageList = lazy(() => import("./common/ImageList"));
 const CountOnScrollNumber = lazy(() => import("./common/CountOnScrollNumber"));
 const GridLayout = lazy(() => import("./common/GridLayout"));
 const GoogleMap = lazy(() => import("./common/GoogleMap"));
@@ -40,7 +42,7 @@ export  {
     CarouselCard,
     DynamicGridContainer,
     FactBox,
-    ImageListCard,
+    ImageList,
     ImageListContainer,
     CountOnScrollNumber,
     GridLayout,

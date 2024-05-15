@@ -1,7 +1,6 @@
 import React from 'react'
-import CountOnScrollNumber from '../../../../components/common/CountOnScrollNumber'
 import { Grid } from '@mui/material'
-import { Paragraph } from '../UI'
+import { Paragraph, CountOnScrollNumber } from '../../../globalComponents'
 
 const NumberCountUpCard = ({data, xs = 12, md = 4}) => {
   return (

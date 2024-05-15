@@ -1,8 +1,6 @@
 import { Box, Grid } from '@mui/material'
 import React from 'react'
-import GridLayout from '../common/GridLayout'
-import { CustomButton } from '../UI'
-import HeadingTextGroup from '../common/HeadingTextGroup'
+import { GridLayout, CustomButton, HeadingTextGroup } from '../../../globalComponents'
 
 const GridSectionCard = ({miniTitle, mainTitle, specialText, description, src}) => {
   return (

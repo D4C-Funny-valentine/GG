@@ -1,6 +1,6 @@
 import { Box, Grid } from '@mui/material'
 import React from 'react'
-import { Paragraph, Heading } from '../../components'
+import { Paragraph, Heading } from '../../../../globalComponents'
 import { creativeSolutions, solutionTitle } from '../../data/_company'
 
 const CreativeSolutions = () => {

@@ -2,7 +2,7 @@ import { Box, Grid, Stack } from '@mui/material'
 import React from 'react'
 import { CustomButton, CustomPaperCard, DynamicGridContainer, GridLayout, Heading, Paragraph } from '../../pages/CompanyLandingWebsite/components'
 import { formatDate } from '../../utils/dateUtils'
-import CustomChip from '../../components/ui/CustomChip'
+import CustomChip from '../../globalComponents/ui/CustomChip'
 import { cardBorderColor, hoverCardTranslate } from '../../utils/helperStyle'
 import { useThemeSetting } from '../../redux/features'
 

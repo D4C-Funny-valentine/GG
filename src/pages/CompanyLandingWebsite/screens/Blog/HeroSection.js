@@ -1,5 +1,5 @@
 import React from 'react'
-import { Heading, MotionHeroSection } from "../../components"
+import { Heading, MotionHeroSection } from "../../../../globalComponents"
 import { Box } from '@mui/material'
 import { useThemeSetting } from '../../features';
 

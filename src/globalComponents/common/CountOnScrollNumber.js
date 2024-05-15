@@ -1,8 +1,8 @@
 import React from 'react'
 import ScrollTrigger from 'react-scroll-trigger';
 import CountUp from 'react-countup';
-import { isDecimal } from '../../utils/calculation';
 import Heading from '../ui/Heading';
+import { isDecimal } from '../../utils/calculation';
 
 const CountOnScrollNumber = ({n, unit = ""}) => {
     const [isScroll,setIsScroll] = React.useState(false);

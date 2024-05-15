@@ -1,6 +1,7 @@
 import React from 'react'
-import { HeadingTextGroup, GridLayout, ProfileCard } from "../../components"
+import { HeadingTextGroup, GridLayout } from "../../../../globalComponents"
 import { Box, Grid } from '@mui/material'
+import { ProfileCard } from '../../components'
 
 
 const AboutUsSection = ({data}) => {

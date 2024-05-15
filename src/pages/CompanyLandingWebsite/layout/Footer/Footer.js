@@ -1,7 +1,7 @@
 import React from 'react'
 import { Box, Button, Container, Divider } from "@mui/material"
 import { Link, NavLink } from 'react-router-dom'
-import { Paragraph } from '../../components'
+import { Paragraph } from '../../../../globalComponents'
 import { useThemeSetting } from '../../features'
 
 const Footer = () => {

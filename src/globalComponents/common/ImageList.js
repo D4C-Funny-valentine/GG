@@ -11,7 +11,7 @@ import React from 'react'
  * @returns {React.ReactElement} 
  */
 
-const ImageListCard = ({url, cols, style={}, sx={}}) => {
+const ImageList = ({url, cols, style={}, sx={}}) => {
   return (
     <ImageListItem cols={cols || 1} sx={{...sx}}>
         <img src={url} alt={url} style={{width: '100%', height: '100%', objectFit: 'cover', borderRadius: '1rem', ...style}} loading="lazy"/>
@@ -19,4 +19,4 @@ const ImageListCard = ({url, cols, style={}, sx={}}) => {
   )
 }
 
-export default ImageListCard
+export default ImageList
