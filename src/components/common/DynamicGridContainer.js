@@ -1,5 +1,5 @@
 import React from 'react'
-import { calculateEven } from '../../../../utils/calculation'
+import { calculateEven } from '../../utils/calculation'
 import { Box, Grid } from '@mui/material'
 
 /**

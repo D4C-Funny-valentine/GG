@@ -1,6 +1,6 @@
 import React from 'react'
 import { Box, ImageList } from '@mui/material'
-import { useMediaQueryDevice } from '../../../../hooks';
+import { useMediaQueryDevice } from '../../hooks';
 
 /**
  * A container component for rendering images in a grid layout.

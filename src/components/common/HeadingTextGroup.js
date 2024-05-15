@@ -1,6 +1,6 @@
 import { Box } from '@mui/material'
 import React from 'react'
-import { Heading, Paragraph } from '../UI'
+import { Heading, Paragraph } from '../ui'
 
 /**
  * A component that displays a mini title, main title, and description in a centered layout.
