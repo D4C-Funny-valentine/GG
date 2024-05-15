@@ -1,10 +1,9 @@
 import { Box, Grid, Stack } from '@mui/material'
 import React from 'react'
-import { CustomButton, CustomPaperCard, DynamicGridContainer, GridLayout, Heading, Paragraph } from '../../web/CompanyLandingWebsite/components'
-import { formatDate } from '../../utils/dateUtils'
-import CustomChip from '../../globalComponents/ui/CustomChip'
-import { cardBorderColor, hoverCardTranslate } from '../../utils/helperStyle'
-import { useThemeSetting } from '../../redux/features'
+import { CustomButton, CustomPaperCard, CustomChip, DynamicGridContainer, GridLayout, Heading, Paragraph } from '@globalComponents/index'
+import { formatDate } from '../../../../utils/dateUtils'
+import { cardBorderColor, hoverCardTranslate } from '../../../../utils/helperStyle'
+import { useThemeSetting } from '../../features'
 
 const LatestStories = ({data, upcoming}) => {
     const {mode} = useThemeSetting();

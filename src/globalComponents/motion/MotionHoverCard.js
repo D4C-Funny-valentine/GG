@@ -1,7 +1,7 @@
 import { Box } from '@mui/material'
 import React from 'react'
-import { useMediaQueryDevice } from '../../hooks'
 import {motion} from "framer-motion";
+import { useMediaQueryDevice } from '@hooks/index';
 
 const MotionHoverCard = ({children, url, minHeight}) => {
     const {tablet} = useMediaQueryDevice();

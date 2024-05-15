@@ -1,7 +1,7 @@
 import React from "react"
 import Button from "@mui/material/Button";
 import CircularProgress  from "@mui/material/CircularProgress";
-import { useMediaQueryDevice } from "../../hooks";
+import { useMediaQueryDevice } from "@hooks/index";
 
 /**
  * Custom button component with support for loading state.

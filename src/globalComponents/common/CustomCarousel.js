@@ -2,7 +2,7 @@ import React from 'react';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import "./common.css";
-import { useMediaQueryDevice } from '../../hooks';
+import { useMediaQueryDevice } from '@hooks/index';
 
 /**
  * A wrapper component for the React Multi Carousel with default props.

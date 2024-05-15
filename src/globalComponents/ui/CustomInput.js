@@ -1,7 +1,7 @@
 import React from "react";
 import TextField from "@mui/material/TextField";
 import { styled } from "@mui/material";
-import { useMediaQueryDevice } from "../../hooks";
+import { useMediaQueryDevice } from "@hooks/index";
 
 /**
  * Renders a custom input component with the given props.

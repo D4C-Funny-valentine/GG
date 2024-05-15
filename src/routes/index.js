@@ -1,8 +1,8 @@
 import React, { Suspense } from "react";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import LandingWebsite from "../pages/CompanyLandingWebsite";
-import ErrorRoute from "../views/ErrorRoute";
-import { Landing, Company, Carrer, Blog, Portfolio } from "../pages/CompanyLandingWebsite/screens";
+import LandingWebsite from "../website/CompanyLandingWebsite";
+import { Landing, Company, Carrer, Blog, Portfolio } from "../website/CompanyLandingWebsite/screens";
+import ErrorRoute from "./ErrorRoute";
 // import { PATH } from "../data/_navData";
 
 const router = createBrowserRouter([
