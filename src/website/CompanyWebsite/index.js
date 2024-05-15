@@ -5,12 +5,12 @@ import Footer from "./layout/Footer/Footer";
 import { Outlet } from 'react-router-dom'
 import { Provider } from "react-redux";
 import { store } from "./store";
-import CustomThemeProvider from "./config/_theme";
+import CompanyWebsiteCustomThemeProvider from "./config/_theme";
 
-const LandingWebsite = ({children}) => {
+const CompanyWebsite = ({children}) => {
       return (
         <Provider store={store}>
-            <CustomThemeProvider>
+            <CompanyWebsiteCustomThemeProvider>
                 <CssBaseline/>
                 <Box> 
                     <Navigation/>
@@ -18,9 +18,9 @@ const LandingWebsite = ({children}) => {
                         <Outlet/>
                     <Footer/>
                 </Box>
-            </CustomThemeProvider>
+            </CompanyWebsiteCustomThemeProvider>
         </Provider>
       )
 }
 
-export default LandingWebsite;
+export default CompanyWebsite;

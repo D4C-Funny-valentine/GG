@@ -1,8 +1,9 @@
+import { WEBSITE_NAME } from '@config/_defaultData';
 import { createSlice } from '@reduxjs/toolkit'
 
-
 const initialState = {
-    mode : 'light'
+    mode : JSON.parse(localStorage.getItem(WEBSITE_NAME.COMPANY_WEBSITE.name)) ?? 'light'
+
 }
 
 export const themeSlice = createSlice({
@@ -11,6 +12,7 @@ export const themeSlice = createSlice({
     reducers: {
         changeThemeMode : (state) => {
             state.mode = state.mode === 'light' ? 'dark' : 'light';
+            localStorage.setItem(WEBSITE_NAME.COMPANY_WEBSITE.name, JSON.stringify(state.mode))
         }
     }
 })

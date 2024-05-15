@@ -2,6 +2,7 @@
     "compilerOptions": {
       "baseUrl": "src",
       "paths": {
+        "@config/*": ["config/*"],
         "@globalComponents/*": ["globalComponents/*"],
         "@globalComponents/ui/*": ["globalComponents/ui/*"],
         "@globalComponents/common/*": ["globalComponents/common/*"],

@@ -1,7 +1,7 @@
 import React, { Suspense } from "react";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import LandingWebsite from "../website/CompanyLandingWebsite";
-import { Landing, Company, Carrer, Blog, Portfolio } from "../website/CompanyLandingWebsite/screens";
+import CompanyWebsite from "../website/CompanyWebsite";
+import { Landing, Company, Carrer, Blog, Portfolio } from "../website/CompanyWebsite/screens";
 import ErrorRoute from "./ErrorRoute";
 // import { PATH } from "../data/_navData";
 
@@ -12,8 +12,8 @@ const router = createBrowserRouter([
     errorElement: <ErrorRoute />,
   },
   {
-    path: "/landing",
-    element: <LandingWebsite />,
+    path: "/company",
+    element: <CompanyWebsite />,
     errorElement: <ErrorRoute />,
     children: [
       {
