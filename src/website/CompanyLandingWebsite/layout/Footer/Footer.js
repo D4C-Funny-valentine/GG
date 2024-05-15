@@ -5,7 +5,7 @@ import { Paragraph } from '@globalComponents/index'
 import { useThemeSetting } from '../../features'
 
 const Footer = () => {
-  const { mode } = useThemeSetting();
+  const {mode} = useThemeSetting();
   return (
     <>
       <Divider/>
