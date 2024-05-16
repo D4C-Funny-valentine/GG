@@ -4,8 +4,8 @@ import { NavLink, useNavigate } from 'react-router-dom'
 import { Paragraph, CustomButton } from '@globalComponents/index'
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
-import { PATH, navLinks } from '../../data/_navData'
 import { useDrawer, useThemeSetting } from '../../features';
+import { navLinks } from 'website/StartUp/data/_navData';
 
 const CustomDrawer = ({open}) => {
     const {mode} = useThemeSetting();
@@ -97,23 +97,26 @@ const DrawerDropdownItem = ({item}) => {
 const ActiveNavbarLink = ({data}) => {
     const {onCloseDrawer} = useDrawer();
     const [active, setActive] = React.useState(false);
+    const {mode} = useThemeSetting();
 
     const navigate = useNavigate();
 
     const handleNavigation = () => {
         onCloseDrawer();
-        return data.to === PATH.LANDING.landing ? navigate('/') : navigate(data.to)
+        return navigate(data.to)
     }
 
     return (
             <NavLink
-                to={data.to === PATH.LANDING.landing ? '/' : data.to}
+                to={data.to}
                 className={({ isActive }) => setActive(isActive)}
                 onClick={handleNavigation}
+                caseSensitive
+                end
             >
-                <CustomButton variant='outline' sx={{color: active ? 'primary.main' : '#000', width : '100%', justifyContent : 'start', bgcolor : active ? '#e6f2f82b' : 'transparent' }} size="small">
+                <CustomButton variant='outline' sx={{color: active ? 'primary.main' : mode === 'light' ? '#000' : '#fff', width : '100%', justifyContent : 'start', bgcolor : active ? '#1976d21a' : 'transparent' }} size="small">
                     <Paragraph
-                        variant={active ? 'body1' : 'body2'}
+                        variant={'body1'}
                         sx={{ cursor: "pointer", textTransform: "capitalize", fontWeight : active ? 700 : 400}}
                     >
                         {data.title}
@@ -122,27 +125,5 @@ const ActiveNavbarLink = ({data}) => {
             </NavLink>
     )
 }
-
-// const DrawerItem = ({item}) => {
-//     const [active, setActive] = React.useState(false);
-   
-//     return (
-//        <Box sx={{padding : '4px 5px'}}>
-//              <NavLink
-//                 to={item === 'landing' ? '/' : `/${item}`}
-//                     className={({ isActive }) => setActive(isActive)}
-//             >
-//             <CustomButton variant='outline' sx={{color: active ? 'primary.main' : '#000', width : '100%', justifyContent : 'start', bgcolor : active ? '#e6f2f82b' : 'transparent' }} size="small">
-//                 <Paragraph
-//                     variant={active ? 'body1' : 'body2'}
-//                     sx={{ cursor: "pointer", textTransform: "capitalize", fontWeight : active ? 700 : 400}}
-//                 >
-//                     {item}
-//                 </Paragraph>
-//             </CustomButton>
-//             </NavLink>
-//        </Box>
-//     )
-// } 
 
 export default CustomDrawer

@@ -9,6 +9,7 @@ import { useMediaQueryDevice, useScrollNavbar } from "@hooks/index"
 import { specialPath } from "../../data/_navData";
 import { useDrawer, useThemeSetting } from "../../features";
 import { NavbarLogo } from "../../components";
+import ROUTES from "@config/_routes";
 
 const Navigation = () => {
   const { pathname } = useLocation();
@@ -39,7 +40,7 @@ const Navigation = () => {
               color: getNavbarColor(), py: 1
             }} 
             color={
-              pathname === '/landing' && !isScrolled  
+              pathname === ROUTES.STARTUP.base && !isScrolled  
               ? 'transparent' : isScrolled  
               ? 'inherit' : 'transparent'
             } 
@@ -84,7 +85,7 @@ const LowerNavBar = ({isScroll, tablet, mode}) => {
         tablet
         ? (
           <Box sx={{display : 'flex', gap: '1rem', alignItems: 'center'}}>
-          <CustomLink isDefaultLink={true} />
+          <CustomLink/>
           <Button variant="contained" color="primary">
             Buy now
           </Button>

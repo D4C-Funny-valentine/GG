@@ -1,8 +1,5 @@
 const WEBSITE_NAME= Object.freeze({
-    COMPANY_WEBSITE : {
-        name: "company",
-        path: '/company'
-    }
+    startup : "startup"
 })
 
 export { WEBSITE_NAME };
