@@ -1,9 +1,9 @@
 import React, { Suspense } from "react";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import CompanyWebsite from "../website/CompanyWebsite";
-import { Landing, Company, Carrer, Blog, Portfolio } from "../website/CompanyWebsite/screens";
+import CompanyWebsite from "../website/StartUp";
+import { Landing, Company, Carrer, Blog, Portfolio } from "../website/StartUp/screens";
 import ErrorRoute from "./ErrorRoute";
-// import { PATH } from "../data/_navData";
+import ROUTES from "@config/_routes";
 
 const router = createBrowserRouter([
   {
@@ -12,7 +12,7 @@ const router = createBrowserRouter([
     errorElement: <ErrorRoute />,
   },
   {
-    path: "/company",
+    path: ROUTES.STARTUP.base,
     element: <CompanyWebsite />,
     errorElement: <ErrorRoute />,
     children: [
@@ -21,19 +21,19 @@ const router = createBrowserRouter([
         element:  <Landing />,
       },
       {
-        path: "company",
+        path: ROUTES.STARTUP.company,
         element: <Company/>,
       },
       {
-        path: "carrer",
+        path: ROUTES.STARTUP.carrer,
         element: <Carrer />
       },
       {
-        path: "blog",
+        path: ROUTES.STARTUP.blog,
         element: <Blog />
       },
       {
-        path: "portfolio",
+        path: ROUTES.STARTUP.portfolio,
         element: <Portfolio />
       },
     ],

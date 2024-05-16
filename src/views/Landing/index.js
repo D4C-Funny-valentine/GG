@@ -9,7 +9,7 @@ import { dev_platform, features, services } from "../../data/_landingData";
 import { ClassTemplate, DevPlatFormFeatures } from "../../web/CompanyLandingWebsite/components";
 import { aboutUs } from "../../data/common";
 
-const StartUp = () => {
+const Landing = () => {
   const containerPaddingY = { xs: 12, md: 16 };
   return (
     <Box sx={{height: '100%'}}>
@@ -47,4 +47,4 @@ const StartUp = () => {
   );
 };
 
-export default StartUp;
+export default Landing;
