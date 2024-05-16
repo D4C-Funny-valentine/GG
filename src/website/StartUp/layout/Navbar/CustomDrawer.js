@@ -5,7 +5,7 @@ import { Paragraph, CustomButton } from '@globalComponents/index'
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import { useDrawer, useThemeSetting } from '../../features';
-import { navLinks } from 'website/StartUp/data/_navData';
+import { navLinks } from '../../data/_navlinks';
 
 const CustomDrawer = ({open}) => {
     const {mode} = useThemeSetting();

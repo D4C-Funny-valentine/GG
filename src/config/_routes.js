@@ -4,7 +4,7 @@ const ROUTES = {
         landing : '', // for munipulate only
         company: 'company',
         carrer : 'carrer',
-        blog : 'blupog',
+        blog : 'blog',
         portfolio: 'portfolio',
     }
 }

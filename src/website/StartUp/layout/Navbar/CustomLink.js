@@ -2,7 +2,7 @@ import React from "react";
 import { Toolbar } from "@mui/material";
 import {
   navLinks,
-} from "../../data/_navData";
+} from "../../data/_navlinks";
 import ActiveNavbarLink from "./ActiveNavbarLink";
 import DropDownList from "./DropDownList";
 

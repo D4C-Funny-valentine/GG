@@ -2,7 +2,7 @@ import React from 'react'
 import "./component.css"
 import { NavLink, useLocation } from 'react-router-dom'
 import { useThemeSetting } from '../features';
-import { specialPath } from '../data/_navData';
+import { specialPath } from '../data/_navlinks';
 
 const NavbarLogo = ({isScroll}) => {
   const {mode} = useThemeSetting();

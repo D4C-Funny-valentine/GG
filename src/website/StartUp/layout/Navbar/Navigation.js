@@ -6,10 +6,11 @@ import { useLocation } from "react-router-dom";
 import MenuIcon from '@mui/icons-material/Menu';
 import CustomDrawer from "./CustomDrawer";
 import { useMediaQueryDevice, useScrollNavbar } from "@hooks/index"
-import { specialPath } from "../../data/_navData";
+import { specialPath } from "../../data/_navlinks";
 import { useDrawer, useThemeSetting } from "../../features";
 import { NavbarLogo } from "../../components";
 import ROUTES from "@config/_routes";
+import { checkPathname } from "@utils/helperFun";
 
 const Navigation = () => {
   const { pathname } = useLocation();
@@ -21,7 +22,7 @@ const Navigation = () => {
   const getNavbarColor = () => {
     if ( isScrolled  && mode === 'light'){
       return 'inherit';
-    } else if (specialPath.includes(pathname) || mode === 'dark'){
+    } else if (checkPathname(pathname, specialPath) || mode === 'dark'){
       return '#fff';
     } else {
       return 'inherit';
