@@ -2,10 +2,10 @@ import React from 'react'
 import { Box, Button, Container, Divider } from "@mui/material"
 import { Link, NavLink } from 'react-router-dom'
 import { Paragraph } from '@globalComponents/index'
-import { useThemeSetting } from '../../features'
+import { useStartUpThemeSetting } from '../../features'
 
 const Footer = () => {
-  const {mode} = useThemeSetting();
+  const {mode} = useStartUpThemeSetting();
   return (
     <>
       <Divider/>

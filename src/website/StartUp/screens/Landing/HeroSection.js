@@ -2,7 +2,7 @@ import React from 'react'
 import { Box, Paper, Container } from "@mui/material";
 import { Heading, CustomButton, CustomInput } from '@globalComponents/index';
 import Marquee from 'react-fast-marquee';
-import { useThemeSetting } from '../../features';
+import { useStartUpThemeSetting } from '../../features';
 import { brandLogo } from '../../data/common';
 import { useMediaQueryDevice } from '@hooks/index';
 
@@ -32,7 +32,7 @@ const HeroSection = () => {
 }
 
 const LogoContainer = () => {
-  const { mode } = useThemeSetting();
+  const { mode } = useStartUpThemeSetting();
   const { mobile }  = useMediaQueryDevice();
 
   return (

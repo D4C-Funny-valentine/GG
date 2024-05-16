@@ -7,14 +7,14 @@ import MenuIcon from '@mui/icons-material/Menu';
 import CustomDrawer from "./CustomDrawer";
 import { useMediaQueryDevice, useScrollNavbar } from "@hooks/index"
 import { specialPath } from "../../data/_navlinks";
-import { useDrawer, useThemeSetting } from "../../features";
+import { useDrawer, useStartUpThemeSetting } from "../../features";
 import { NavbarLogo } from "../../components";
 import ROUTES from "@config/_routes";
 import { checkPathname } from "@utils/helperFun";
 
 const Navigation = () => {
   const { pathname } = useLocation();
-  const {mode} = useThemeSetting();
+  const {mode} = useStartUpThemeSetting();
   // change navbar color when scrolling
   const { tablet } = useMediaQueryDevice();
   const { isScrolled } = useScrollNavbar(40);
@@ -57,7 +57,7 @@ const Navigation = () => {
 };
 
 const UpperNavBar = () => {
-  const {mode, changeMode} = useThemeSetting();
+  const {mode, changeMode} = useStartUpThemeSetting();
   return (
     <Toolbar sx={{justifyContent: 'flex-end', alignItems: 'center', gap: { xs : '0.5rem', md : '1rem' }, position: 'relative', zIndex: 5, bgcolor: 'transparent'}} style={{padding: 0, minHeight: '40px', paddingTop: 3}}>
       <Box sx={{display: 'flex', alignItems: "center", gap: 1}}>

@@ -1,7 +1,7 @@
 import { useDispatch } from "react-redux"
 import { changeThemeMode } from "./_reducer";
 
-const useThemeSettingAction = () => {
+const useStartUpThemeSettingAction = () => {
     const dispatch = useDispatch();
 
     const changeMode = () => {
@@ -13,4 +13,4 @@ const useThemeSettingAction = () => {
     }
 }
 
-export default useThemeSettingAction
+export default useStartUpThemeSettingAction

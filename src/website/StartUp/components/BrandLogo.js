@@ -1,9 +1,9 @@
 import React from 'react'
-import { useThemeSetting } from '../features';
+import { useStartUpThemeSetting } from '../features';
 
 
 const BrandLogo = ({src, alt, className, maxWidth, objectFit = 'contain', ...props }) => {
-  const { mode } = useThemeSetting();
+  const { mode } = useStartUpThemeSetting();
   return (
     <img 
       src={src} 

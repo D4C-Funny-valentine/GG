@@ -3,10 +3,10 @@ import React from 'react'
 import { CustomButton, CustomPaperCard, CustomChip, DynamicGridContainer, GridLayout, Heading, Paragraph } from '@globalComponents/index'
 import { formatDate } from '../../../../utils/dateUtils'
 import { cardBorderColor, hoverCardTranslate } from '../../../../utils/helperStyle'
-import { useThemeSetting } from '../../features'
+import { useStartUpThemeSetting } from '../../features'
 
 const LatestStories = ({data, upcoming}) => {
-    const {mode} = useThemeSetting();
+    const {mode} = useStartUpThemeSetting();
   return (
     <Box>
         <GridLayout spacing={6}>
