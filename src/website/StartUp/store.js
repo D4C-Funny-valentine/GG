@@ -1,6 +1,6 @@
 import { configureStore } from '@reduxjs/toolkit'
 import { combineReducers } from "redux";
-import { drawerReducer, themeSettingReducer } from './features';
+import { startUpDrawerReducer, themeSettingReducer } from './features';
 import { persistStore, persistReducer } from "redux-persist";
 import storage from "redux-persist/lib/storage";
 
@@ -11,7 +11,7 @@ const startupPersistConfig = {
 
 const reducers = combineReducers({
     theme : themeSettingReducer,
-    drawer : drawerReducer
+    drawer : startUpDrawerReducer
 })
 
 const persistedReudcer = persistReducer(startupPersistConfig, reducers);

@@ -4,12 +4,12 @@ import { NavLink, useNavigate } from 'react-router-dom'
 import { Paragraph, CustomButton } from '@globalComponents/index'
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
-import { useDrawer, useStartUpThemeSetting } from '../../features';
+import { useStartUpDrawer, useStartUpThemeSetting } from '../../features';
 import { navLinks } from '../../data/_navlinks';
 
 const CustomDrawer = ({open}) => {
     const {mode} = useStartUpThemeSetting();
-    const {onCloseDrawer} = useDrawer();
+    const {onCloseDrawer} = useStartUpDrawer();
 
   return (
     <Drawer open={open} onClose={onCloseDrawer} role='presentation'>
@@ -95,7 +95,7 @@ const DrawerDropdownItem = ({item}) => {
 }
 
 const ActiveNavbarLink = ({data}) => {
-    const {onCloseDrawer} = useDrawer();
+    const {onCloseDrawer} = useStartUpDrawer();
     const [active, setActive] = React.useState(false);
     const {mode} = useStartUpThemeSetting();
 

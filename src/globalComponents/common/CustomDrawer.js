@@ -1,4 +1,4 @@
-import { Drawer } from '@mui/material'
+import { Box, Drawer } from '@mui/material'
 import React from 'react'
 
 /**

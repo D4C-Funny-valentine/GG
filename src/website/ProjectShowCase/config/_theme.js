@@ -133,6 +133,7 @@ const ProjectShowCaseCustomThemeProvider = (props) => {
             },
             secondary: {
                 main: '#0f3460',
+                light: '#7d879c'
             },
             background: {
                 paper: '#ffffff',
@@ -179,7 +180,29 @@ const ProjectShowCaseCustomThemeProvider = (props) => {
                   sizeLarge: {
                     padding: '.6rem 2.5rem',
                     fontWeight: 600,
-                    margin: '0.5rem'
+                    margin: '0.5rem',
+                  },
+                  outlinedSecondary: {
+                    borderColor: '#0f3460',
+                    '&:active': {
+                          boxShadow: 'none',
+                    },
+                    '&:hover': {
+                        border: '1px solid #0f3460',
+                        backgroundColor: '#0f346011',
+                    }
+                  },
+                  containedSecondary: {
+                    backgroundColor: '#0f3460',
+                    '&:active': {
+                          boxShadow: 'none',
+                          color: '#fff'
+                    },
+                    '&:hover': {
+                        boxShadow: '0px 0px 28px rgba(3, 0, 71, 0.01)',
+                        backgroundColor: '#0f3460',
+                        color: '#fff',
+                    }
                   },
                   contained: {
                         boxShadow: '0px 4px 16px rgba(43, 52, 69, 0.1)',

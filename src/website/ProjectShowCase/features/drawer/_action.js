@@ -1,7 +1,7 @@
 import { useDispatch } from "react-redux";
 import { openDrawer, closeDrawer } from "./_reducer";
 
-const useStartUpDrawerAction = () => {
+const useProjectShowCaseDrawerAction = () => {
     const dispatch = useDispatch();
 
     const onOpenDrawer = () => (
@@ -18,4 +18,4 @@ const useStartUpDrawerAction = () => {
     }    
 }
 
-export default useStartUpDrawerAction
+export default useProjectShowCaseDrawerAction

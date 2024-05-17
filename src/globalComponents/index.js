@@ -23,6 +23,7 @@ const ImageList = lazy(() => import("./common/ImageList"));
 const CountOnScrollNumber = lazy(() => import("./common/CountOnScrollNumber"));
 const GridLayout = lazy(() => import("./common/GridLayout"));
 const GoogleMap = lazy(() => import("./common/GoogleMap"));
+const NavbarLogo = lazy(() => import("./common/NavbarLogo"));
 
 // motion
 const MotionHeroSection = lazy(() => import("./motion/MotionHeroSection"));
@@ -47,5 +48,6 @@ export  {
     CountOnScrollNumber,
     GridLayout,
     GoogleMap,
-    MotionHoverCard
+    MotionHoverCard,
+    NavbarLogo
 }

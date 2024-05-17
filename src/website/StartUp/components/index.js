@@ -1,6 +1,5 @@
 // urgent components
 import { lazy } from "react"
-import NavbarLogo from "./NavbarLogo"
 
 // lazy comoponents
 const BrandLogo = lazy(() => import("./BrandLogo"));
@@ -25,7 +24,6 @@ const ClassTemplate = lazy(() => import("./ClassTemplate"));
 const GridSectionCard = lazy(() => import("./GridSectionCard"));
 
 export  {
-    NavbarLogo,
     BrandLogo,
     BrandLogoShowCase,
     CustomAccordion,

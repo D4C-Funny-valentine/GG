@@ -1,18 +1,25 @@
 import React from "react";
-import { Box, Button, CssBaseline } from "@mui/material"
+import { Box, CssBaseline } from "@mui/material"
 import ProjectShowCaseCustomThemeProvider from "./config/_theme";
-import { CustomButton } from "@globalComponents/ui";
+import Navbar from "./layout/Navbar";
+import Footer from "./layout/Footer";
+import { persistor, store } from "./store";
+import { Provider } from "react-redux";
+import { PersistGate } from "redux-persist/lib/integration/react";
 
-const ProjectShowCase = ({children}) => {
+const ProjectShowCase = () => {
       return (
-        <ProjectShowCaseCustomThemeProvider>
-            <CssBaseline/>
-            <Box sx={{display : 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh'}}> 
-              <CustomButton variant="contained" size="large">
-                Browsers Pages
-              </CustomButton>
-            </Box>
-        </ProjectShowCaseCustomThemeProvider>
+        <Provider store={store}>
+          <PersistGate persistor={persistor}>
+            <ProjectShowCaseCustomThemeProvider>
+                <CssBaseline/>
+                <Box sx={{display: 'flex', flexDirection: 'column', height: '100vh'}}> 
+                    <Navbar/>
+                    <Footer/>
+                </Box>
+            </ProjectShowCaseCustomThemeProvider>
+          </PersistGate>
+        </Provider>
       )
 }
 
