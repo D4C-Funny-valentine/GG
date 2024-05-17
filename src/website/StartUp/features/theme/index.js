@@ -1,8 +1,8 @@
 import { useSelector } from 'react-redux'
-import useThemeSettingAction from './_action';
+import useStartUpThemeSettingAction from './_action';
 
-export const useThemeSetting = () => {
-    const { changeMode } = useThemeSettingAction();
+export const useStartUpThemeSetting = () => {
+    const { changeMode } = useStartUpThemeSettingAction();
 
     const mode = useSelector((state) => state.theme.mode)
 

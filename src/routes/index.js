@@ -4,11 +4,12 @@ import CompanyWebsite from "../website/StartUp";
 import { Landing, Company, Carrer, Blog, Portfolio } from "../website/StartUp/screens";
 import ErrorRoute from "./ErrorRoute";
 import ROUTES from "@config/_routes";
+import ProjectShowCase from "website/ProjectShowCase";
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <div>Hello world</div>,
+    element: <ProjectShowCase/>,
     errorElement: <ErrorRoute />,
   },
   {

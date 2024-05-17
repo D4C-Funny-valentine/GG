@@ -4,11 +4,11 @@ import { CustomButton, CustomInput, DynamicGridContainer, GridLayout, Heading, P
 import { formatDate } from '../../../../utils/dateUtils'
 import TrendingFlatIcon from "@mui/icons-material/TrendingFlat"
 import { cardBorderColor } from '../../../../utils/helperStyle'
-import { useThemeSetting } from '../../features'
+import { useStartUpThemeSetting } from '../../features'
 
 
 const LoginAndLatestSection = ({data}) => {
-    const {mode} = useThemeSetting();
+    const {mode} = useStartUpThemeSetting();
   return (
     <Box>
         <GridLayout spacing={6}>

@@ -2,10 +2,10 @@ import React from 'react'
 import { Box, Breadcrumbs } from '@mui/material';
 import { Heading, Paragraph } from '@globalComponents/index';
 import { cardBorderColor, hoverBoxShadowStyle } from '../../../utils/helperStyle';
-import { useThemeSetting } from '../features';
+import { useStartUpThemeSetting } from '../features';
 
 const CustomListItem = ({ sx ={}, heading, location, jobType, linkIcon}) => {
-    const {mode} = useThemeSetting();
+    const {mode} = useStartUpThemeSetting();
   return (
     <Box sx={{
       ...sx, 
