@@ -6,6 +6,7 @@ import Footer from "./layout/Footer";
 import { persistor, store } from "./store";
 import { Provider } from "react-redux";
 import { PersistGate } from "redux-persist/lib/integration/react";
+import MainShowCase from "./page/MainShowCase";
 
 const ProjectShowCase = () => {
       return (
@@ -15,6 +16,7 @@ const ProjectShowCase = () => {
                 <CssBaseline/>
                 <Box sx={{display: 'flex', flexDirection: 'column', height: '100vh'}}> 
                     <Navbar/>
+                    <MainShowCase/>
                     <Footer/>
                 </Box>
             </ProjectShowCaseCustomThemeProvider>

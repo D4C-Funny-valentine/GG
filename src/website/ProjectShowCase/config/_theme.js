@@ -16,9 +16,6 @@ const MMFont = {
 };
 
 const ProjectShowCaseCustomThemeProvider = (props) => {
-    const mode = 'light';
-    console.info(`Custom Theme Mode : ${mode}`);
-    console.info("- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -")
     const _theme = React.useMemo(() => createTheme({
         spacing: 4,
         mixins:
@@ -34,6 +31,7 @@ const ProjectShowCaseCustomThemeProvider = (props) => {
             fontWeightRegular: 500,
             fontWeightMedium: 600,
             fontWeightBold: 700,
+            fontColor: '#2b3445',
             h1: {
                 fontFamily:  'Noto Sans Myanmar, "Open Sans", "Arial", sans-serif',
                 fontSize: '2.5rem',
@@ -121,7 +119,6 @@ const ProjectShowCaseCustomThemeProvider = (props) => {
             borderRadius: 5
         },
         palette: {
-            mode,
             common: {
                 black: '#2b3445',
                 white: '#fff',
@@ -139,6 +136,10 @@ const ProjectShowCaseCustomThemeProvider = (props) => {
                 paper: '#ffffff',
                 default: '#f6f9fc',
             },
+            text: {
+                primary: '#2b3445',
+                secondary: '#7d879c',
+            }
         },
         components: {
             MuiCssBaseline : {
@@ -253,6 +254,21 @@ const ProjectShowCaseCustomThemeProvider = (props) => {
                     }
                 }
             },
+            MuiTooltip: {
+                styleOverrides: {
+                    tooltip: {
+                        padding: 10,
+                        backgroundColor: '#7d879c',
+                        color: 'white',
+                        lineHeight: 1.75,
+                        fontSize: '14px',
+                        fontWeight: 400
+                    },
+                    arrow: {
+                        color: '#7d879c'
+                    }
+                }
+            }
             // MuiPaper : {
             //     styleOverrides : {
             //         root: {
