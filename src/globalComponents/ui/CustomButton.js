@@ -8,6 +8,7 @@ import { useMediaQueryDevice } from "@hooks/index";
  * @param {object} props - Component props.
  * @param {'text' | 'outlined' | 'contained'} props.variant - Variant of the button (text, outlined, contained). 
  * @param {'inherit' | 'primary' | 'secondary'} props.color - Color of the button.
+ * @param {'large' | 'medium' | 'small'} props.size - Size of the button.
  * @param {Function} props.onClick - Click event handler
  * @param {React.ReactNode} props.children - Button text or content.
  * @param {React.ReactNode} [props.startIcon] - Icon component for the start of the button.

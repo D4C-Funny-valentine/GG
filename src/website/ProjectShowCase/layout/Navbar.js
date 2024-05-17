@@ -3,11 +3,11 @@ import { NavbarLogo } from '@globalComponents/index';
 import { Box, Button, Container, Toolbar } from '@mui/material';
 import React from 'react';
 import { navdata } from '../config/_navdata';
-import useScrollNavbar from '@hooks/useScrollNavbar';
 import useMediaQueryDevice from '@hooks/useMediaQueryDevice';
 import MenuIcon from '@mui/icons-material/Menu';
 import { useProjectShowCaseDrawer } from '../features';
 import NavigationLinks from '../components/NavigationLinks';
+import Logo from "../assest/logo2.svg"
 
 const Navbar = () => {
   const {tablet} = useMediaQueryDevice();
@@ -15,8 +15,8 @@ const Navbar = () => {
   return (
     <CustomScrollNavbar scrollTrigger={40}>
         <Container maxWidth="xl">
-          <Toolbar sx={{ justifyContent: 'space-between', alignItems: 'center', py: 3 }}>
-            <NavbarLogo src={'https://bazaar.ui-lib.com/assets/images/logo2.svg'} width='98px' />
+          <Toolbar sx={{ justifyContent: 'space-between', alignItems: 'center', py: {md: 3, xs: 1.5} }}>
+            <NavbarLogo src={Logo} width='98px' />
             <Box sx={{color: 'secondary.main'}}>
                 {
                   tablet ? (
