@@ -1,14 +1,13 @@
 import React from "react";
 import { AppBar, Toolbar, Box, Container, Button, Typography } from "@mui/material";
-import { ThemeSwitchIconButton } from "@globalComponents/index"
+import { ThemeSwitchIconButton, NavbarLogo } from "@globalComponents/index"
 import CustomLink from "./CustomLink";
 import { useLocation } from "react-router-dom";
 import MenuIcon from '@mui/icons-material/Menu';
 import CustomDrawer from "./CustomDrawer";
 import { useMediaQueryDevice, useScrollNavbar } from "@hooks/index"
 import { specialPath } from "../../data/_navlinks";
-import { useDrawer, useStartUpThemeSetting } from "../../features";
-import { NavbarLogo } from "../../components";
+import { useStartUpDrawer, useStartUpThemeSetting } from "../../features";
 import ROUTES from "@config/_routes";
 import { checkPathname } from "@utils/helperFun";
 
@@ -77,11 +76,22 @@ const UpperNavBar = () => {
 
 const LowerNavBar = ({isScroll, tablet, mode}) => {
 
-  const { open, onOpenDrawer } = useDrawer();
+  const { open, onOpenDrawer } = useStartUpDrawer();
+  const {pathname} = useLocation();
+
+  const getNavbarColor = () => {
+    if (isScroll && mode === 'light'){
+      return 'https://assets.maccarianagency.com/the-front/logos/logo.svg';
+    } else if (specialPath.includes(pathname) || mode === 'dark'){
+      return 'https://assets.maccarianagency.com/the-front/logos/logo-negative.svg';
+    } else {
+      return 'https://assets.maccarianagency.com/the-front/logos/logo.svg';
+    }
+  };
 
   return  (
     <Toolbar sx={{ justifyContent: "space-between" }} style={{padding: 0}}>
-      <NavbarLogo key={'navbarLogo'} isScroll={isScroll}/>
+      <NavbarLogo key={'navbarLogo'} src={getNavbarColor()}/>
       {
         tablet
         ? (

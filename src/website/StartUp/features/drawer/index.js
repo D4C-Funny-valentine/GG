@@ -1,8 +1,8 @@
 import { useSelector } from "react-redux";
-import useDrawerAction from "./_action";
+import useStartUpDrawerAction from "./_action";
 
-export const useDrawer = () => {
-    const { onOpenDrawer, onCloseDrawer } = useDrawerAction();
+export const useStartUpDrawer = () => {
+    const { onOpenDrawer, onCloseDrawer } = useStartUpDrawerAction();
 
     const open = useSelector(state => state.drawer.open);
 
@@ -13,4 +13,4 @@ export const useDrawer = () => {
     }
 } 
 
-export { default as drawerReducer } from "./_reducer"
+export { default as startUpDrawerReducer } from "./_reducer"
