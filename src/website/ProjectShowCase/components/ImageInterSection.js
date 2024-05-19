@@ -4,7 +4,7 @@ import React from 'react'
 const ImageInterSection = ({src, height}) => {
   return (
     <Box sx={{height}}>
-        <img src={src} style={{objectFit: 'cover', height: '100%', width: '100%'}}/>
+        <img src={src} alt='img' style={{objectFit: 'cover', height: '100%', width: '100%'}}/>
     </Box>
   )
 }

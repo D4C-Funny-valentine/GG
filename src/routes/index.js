@@ -5,6 +5,7 @@ import { Landing, Company, Carrer, Blog, Portfolio } from "../website/StartUp/sc
 import ErrorRoute from "./ErrorRoute";
 import ROUTES from "@config/_routes";
 import ProjectShowCase from "website/ProjectShowCase";
+import GlobalLoading from "./GlobalLoading";
 
 const router = createBrowserRouter([
   {
@@ -45,7 +46,7 @@ const AppRoute = () => {
   return (
     <Suspense
     fallback={
-      <div style={{ height: "100vh", backgroundColor: "white" }}/>
+      <GlobalLoading/>
     }
     >
             <RouterProvider

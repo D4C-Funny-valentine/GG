@@ -12,20 +12,22 @@ import { Box, Grid } from '@mui/material'
  * @param {object} props.imgGridCol - Column layout for the image.
  * @param {object} props.textGridCol - Column layout for the text.
  * @param {object} props.textPadding - Text padding for the text box. (Only left and top) should be string.
+ * @param {object} props.imgGridSx - Style for the Img Grid box.
+ * @param {object} props.textGridSx - Style for the Text Grid box.
  * @param {object} props.sx - Style for the Feature Grid box.
  * @param {React.ReactNode} props.children - Additional render components.
  * @returns {React.ReactElement}
  */
 
-const DynamicGridContainer = ({spacing = 0, imgUrl, imgMaxWidth = '80%', index, imageStyle, imgGridCol= {xs: 12, md: 6}, textGridCol= {xs: 12, md: 6}, textPadding, sx={}, children}) => {
+const DynamicGridContainer = ({spacing = 0, imgUrl, imgMaxWidth = '80%', index, imageStyle, imgGridCol= {xs: 12, md: 6}, textGridCol= {xs: 12, md: 6}, textPadding, sx={}, textGridSx={}, imgGridSx={}, children}) => {
   return (
           <Grid container item spacing={spacing} xs={12} alignItems={'center'} sx={{pt: 8, flexDirection: { md: calculateEven(index) ? 'row' : 'row-reverse'}, ...sx}}>
-              <Grid item xs={textGridCol.xs} md={textGridCol.md} sx={{pl : textPadding?.left ? textPadding.left : { md: calculateEven(index) ? 0 : 14, xs: 0 }, pt: textPadding?.top ? textPadding.top : calculateEven(index) ? 0 : 8 }}>
+              <Grid item xs={textGridCol.xs} md={textGridCol.md} sx={{...textGridSx, pl : textPadding?.left ? textPadding.left : { md: calculateEven(index) ? 0 : 14, xs: 0 }, pt: textPadding?.top ? textPadding.top : calculateEven(index) ? 0 : 8 }}>
                     {children}
               </Grid>
-              <Grid item xs={imgGridCol.xs} md={imgGridCol.md} sx={{pt: calculateEven(index) ? 8 : 0}}>
+              <Grid item xs={imgGridCol.xs} md={imgGridCol.md} sx={{...imgGridSx, pt: calculateEven(index) ? 8 : 0}}>
                     <Box sx={{ maxWidth: imgMaxWidth, mx: { md: calculateEven(index) ? 'auto' : 0, xs : 'auto' }, width: '100%', height: '100%' }}>
-                      <img src={imgUrl} width={'100%'} height={'100%'} style={{objectFit: 'cover', ...imageStyle}} alt={imgUrl}/>
+                      <img src={imgUrl} width={'100%'} height={'100%'} style={{...imageStyle, objectFit: 'cover'}} alt={imgUrl}/>
                     </Box>
               </Grid>
         </Grid>

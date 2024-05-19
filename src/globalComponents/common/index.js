@@ -11,3 +11,4 @@ export {default as ImageList} from "./ImageList";
 export {default as CustomDrawer} from "./CustomDrawer";
 export {default as NavbarLogo} from "./NavbarLogo";
 export {default as CustomScrollNavbar} from "./CustomScrollNavbar";
+export {default as ContainerDivider} from "./ContainerDivider"

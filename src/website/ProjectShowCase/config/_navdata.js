@@ -1,4 +1,4 @@
-const navdata = ["#home", "#features", "#projects"]
+const navdata = ["#services", "#features", "#projects"]
 
 export {
     navdata

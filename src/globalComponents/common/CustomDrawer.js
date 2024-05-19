@@ -1,5 +1,6 @@
-import { Box, Drawer } from '@mui/material'
+import { Box, Drawer, IconButton } from '@mui/material'
 import React from 'react'
+import CloseIcon from '@mui/icons-material/Close';
 
 /**
  * Renders a custom drawer component.
@@ -13,10 +14,15 @@ import React from 'react'
  * @return {React.JSX.Element} The custom drawer component.
  */
 
-const CustomDrawer = ({open, anchor = 'left', minWidth = 280, onClose, role = "presentation", children}) => {
+const CustomDrawer = ({open, anchor = 'left', minWidth = 250, onClose, role = "presentation", children}) => {
   return (
     <Drawer open={open} anchor={anchor} onClose={onClose} role={role}>
-        <Box sx={{minWidth: minWidth, width: '100%'}}>
+        <Box sx={{minWidth: minWidth, width: '100%', position: 'relative'}}>
+            <Box sx={{position: 'absolute', top: 3, right: 3}}>
+              <IconButton onClick={onClose} size='small' sx={{bgcolor: 'primary.main', p: 1, width: '35px', height: '35px', '&:hover': {bgcolor: 'primary.light'}}}>
+                <CloseIcon fontSize='small' sx={{color: 'white'}}/>
+              </IconButton>
+            </Box>
             {children}
         </Box>
     </Drawer>

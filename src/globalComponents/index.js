@@ -24,6 +24,8 @@ const CountOnScrollNumber = lazy(() => import("./common/CountOnScrollNumber"));
 const GridLayout = lazy(() => import("./common/GridLayout"));
 const GoogleMap = lazy(() => import("./common/GoogleMap"));
 const NavbarLogo = lazy(() => import("./common/NavbarLogo"));
+const ContainerDivider= lazy(() => import("./common/ContainerDivider"));
+const SubscriptionBox = lazy(() => import("./common/SubscriptionBox"));
 
 // motion
 const MotionHeroSection = lazy(() => import("./motion/MotionHeroSection"));
@@ -49,5 +51,7 @@ export  {
     GridLayout,
     GoogleMap,
     MotionHoverCard,
-    NavbarLogo
+    NavbarLogo,
+    ContainerDivider,
+    SubscriptionBox
 }

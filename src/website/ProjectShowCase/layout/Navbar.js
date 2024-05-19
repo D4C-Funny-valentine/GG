@@ -15,7 +15,7 @@ const Navbar = () => {
   return (
     <CustomScrollNavbar scrollTrigger={40}>
         <Container maxWidth="xl">
-          <Toolbar sx={{ justifyContent: 'space-between', alignItems: 'center', py: {md: 3, xs: 1.5} }}>
+          <Toolbar sx={{ justifyContent: 'space-between', alignItems: 'center', py: {md: 3, xs: 1} }}>
             <NavbarLogo src={Logo} width='98px' />
             <Box sx={{color: 'secondary.main'}}>
                 {
