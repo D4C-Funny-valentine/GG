@@ -8,7 +8,8 @@
         "@globalComponents/common/*": ["globalComponents/common/*"],
         "@globalComponents/motion/*": ["globalComponents/motion/*"],
         "@hooks/*": ["hooks/*"],
-        "@utils/*": ["utils/*"]
+        "@utils/*": ["utils/*"],
+        "@assets/*": ["assets/*"]
       }
     },
     "include": ["src"]

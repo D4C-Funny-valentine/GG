@@ -1,16 +1,15 @@
-import { Box, InputAdornment } from '@mui/material'
+import { InputAdornment } from '@mui/material'
 import React from 'react'
 import NotificationsNoneOutlinedIcon from '@mui/icons-material/NotificationsNoneOutlined';
-import { CustomInput, Heading } from '@globalComponents/index';
+import { CustomInput, SubscriptionBox } from '@globalComponents/index';
 
 const Subscribe = () => {
   return (
-    <Box sx={{bgcolor: 'primary.main', borderRadius: 4, color: 'white'}}>
-        <Box sx={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', textAlign: 'center', gap: '1rem', minHeight: 300, height: '100%', width: '100%'}}>
-            <Heading variant='h3'>Subscribe to our newsletter</Heading>
-            <Heading>Don't lose a chance to be among the firsts to know about our upcoming news and updates.</Heading>
-            <Box>
-                <CustomInput
+        <SubscriptionBox 
+            title='Subscribe to our newsletter'
+            description="Don't lose a chance to be among the firsts to know about our upcoming news and updates."
+        >
+            <CustomInput
                     labelFocusedColor='white'
                     placeholder='Enter your email'
                     fontColor='white'
@@ -27,10 +26,8 @@ const Subscribe = () => {
                     color="sky"
                     size='medium'
                     sx={{"::placeholder": {color : 'lightgrey'}}}
-                />
-            </Box>
-        </Box>
-    </Box>
+            />
+        </SubscriptionBox>
   )
 }
 

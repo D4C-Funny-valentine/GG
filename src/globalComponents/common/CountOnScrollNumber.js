@@ -4,7 +4,7 @@ import CountUp from 'react-countup';
 import Heading from '../ui/Heading';
 import { isDecimal } from '../../utils/calculation';
 
-const CountOnScrollNumber = ({n, unit = ""}) => {
+const CountOnScrollNumber = ({n, unit = "", variant = 'h1', color}) => {
     const [isScroll,setIsScroll] = React.useState(false);
 
     const onEnter = () => setIsScroll(true);
@@ -12,7 +12,7 @@ const CountOnScrollNumber = ({n, unit = ""}) => {
 
     return (
         <ScrollTrigger onEnter={onEnter} onExit={onExit}>
-            { isScroll &&  <Heading variant='h1'>
+            { isScroll &&  <Heading variant={variant} color={color}>
                 <CountUp 
                     start={0}
                     end={n}

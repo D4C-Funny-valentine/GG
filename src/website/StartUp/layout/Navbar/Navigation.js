@@ -82,7 +82,7 @@ const LowerNavBar = ({isScroll, tablet, mode}) => {
   const getNavbarColor = () => {
     if (isScroll && mode === 'light'){
       return 'https://assets.maccarianagency.com/the-front/logos/logo.svg';
-    } else if (specialPath.includes(pathname) || mode === 'dark'){
+    } else if (checkPathname(pathname, specialPath) || mode === 'dark'){
       return 'https://assets.maccarianagency.com/the-front/logos/logo-negative.svg';
     } else {
       return 'https://assets.maccarianagency.com/the-front/logos/logo.svg';

@@ -1,14 +1,14 @@
 import { CustomButton, FactBox, Heading, Paragraph } from '@globalComponents/index'
 import { Box, Container, Stack, Tooltip } from '@mui/material'
 import React from 'react'
-import { facts } from '../config/_home'
+import { facts } from '../config/_showcase'
 import CheckIcon from '@mui/icons-material/Check';
 import HelpOutlinedIcon from '@mui/icons-material/HelpOutlined';
 
 const Home = () => {
   return (
     <Container maxWidth="lg" sx={{height: '100%'}}>
-        <Box sx={{display: 'flex', justifyContent: 'center', alignItems: 'center', height:"100%", flexDirection: 'column', gap: '2rem'}}>
+        <Box sx={{display: 'flex', justifyContent: 'center', alignItems: 'center', height:"100%", flexDirection: 'column', gap: {xs: '1rem', md: "2rem"}}}>
                 <Heading variant='h1' textAlign="center">
                     Build your online store with
                     <Box sx={{color: 'primary.main'}}>Bazaar</Box>
@@ -32,15 +32,15 @@ const Home = () => {
 
                 <Stack direction={{md: 'row', xs : 'column'}} alignItems={'center'} spacing={3}>
                     <CustomButton variant='outlined' size="large">
-                        What's inside
+                        <a href='#services'>What's inside</a>
                     </CustomButton>
                     <CustomButton variant='contained' size='large'>
-                        View Projects
+                        <a href='#projects'>View Projects</a>
                     </CustomButton>
                 </Stack>
                 
                 <Stack direction={'row'} spacing={1}>
-                    <Paragraph variant='body1' sx={{textDecortion: 'underline'}}>I need server integration</Paragraph>
+                    <Paragraph component="a" variant='body1' sx={{textDecoration : 'underline', cursor: 'pointer'}}>I need server integration</Paragraph>
                     <Tooltip title="Bazaar has REST API integrated on the frontend. Click here if you also need a server side solution." placement="right" arrow>
                         <HelpOutlinedIcon color='secondary' sx={{fontSize: '20px'}}/>
                     </Tooltip>

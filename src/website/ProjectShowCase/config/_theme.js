@@ -31,11 +31,12 @@ const ProjectShowCaseCustomThemeProvider = (props) => {
             fontWeightRegular: 500,
             fontWeightMedium: 600,
             fontWeightBold: 700,
-            fontColor: '#2b3445',
+            fontWeightBolder: 800,
+            fontColor :'#0f3460',
             h1: {
                 fontFamily:  'Noto Sans Myanmar, "Open Sans", "Arial", sans-serif',
                 fontSize: '2.5rem',
-                fontWeight:  700,
+                fontWeight:  800,
             },
             h2: {
                 fontFamily:  'Noto Sans Myanmar, "Open Sans", "Arial", sans-serif',
@@ -46,6 +47,7 @@ const ProjectShowCaseCustomThemeProvider = (props) => {
                 fontFamily: 'Noto Sans Myanmar, "Open Sans", "Arial", sans-serif',
                 fontSize : '1.5rem',
                 fontWeight:  700,
+                color: '#2b3445'
             },
             h4: {
                 fontFamily:  'Noto Sans Myanmar, "Open Sans", "Arial", sans-serif',
@@ -134,10 +136,10 @@ const ProjectShowCaseCustomThemeProvider = (props) => {
             },
             background: {
                 paper: '#ffffff',
-                default: '#f6f9fc',
+                default: '#fff',
             },
             text: {
-                primary: '#2b3445',
+                primary: '#0f3460',
                 secondary: '#7d879c',
             }
         },

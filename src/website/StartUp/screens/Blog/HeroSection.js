@@ -9,7 +9,7 @@ const HeroSection = () => {
     <MotionHeroSection 
       url='https://assets.maccarianagency.com/backgrounds/img52.jpg' 
       isOpacity={false} 
-      addDarkCover={mode === 'light' ? false : true} 
+      addDarkCover={true} 
       bgPosition="center"
       style={{clipPath : `ellipse(150% 100% at 50% 0%)`, minHeight: '95vh'}}>
         <Box sx={{textAlign: 'center'}}>
