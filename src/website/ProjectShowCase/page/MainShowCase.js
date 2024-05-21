@@ -21,7 +21,7 @@ const MainShowCase = () => {
         </Box>
       </Container>
       
-      <Box sx={{bgcolor: '#f6f9fc'}}>
+      <Box sx={{bgcolor: 'background.silver'}}>
         <Box sx={{pt: 10}}>
             <ImageInterSection src={'https://bazaar.ui-lib.com/_next/image?url=%2Fassets%2Fimages%2Flanding%2Fpage-group-2.png&w=3840&q=100'} height={'400px'}/>
           </Box>

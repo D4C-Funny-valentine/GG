@@ -7,7 +7,7 @@ import useMediaQueryDevice from '@hooks/useMediaQueryDevice';
 import MenuIcon from '@mui/icons-material/Menu';
 import { useProjectShowCaseDrawer } from '../features';
 import NavigationLinks from '../components/NavigationLinks';
-import Logo from "../assest/logo2.svg"
+import Logo from "@assets/logo2.svg"
 
 const Navbar = () => {
   const {tablet} = useMediaQueryDevice();

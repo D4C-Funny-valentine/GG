@@ -6,6 +6,15 @@ const ROUTES = {
         carrer : 'carrer',
         blog : 'blog',
         portfolio: 'portfolio',
+    },
+    MARKET : {
+        base: '/market',
+        landing: '',
+        sale: 'sales',
+        profile: 'profile',
+        orders: 'orders',
+        wishlist: 'wishlist',
+        shop: 'shop'
     }
 }
 
