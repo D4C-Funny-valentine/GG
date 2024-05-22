@@ -1,11 +1,13 @@
 import React, { Suspense } from "react";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import CompanyWebsite from "../website/StartUp";
-import { Landing, Company, Carrer, Blog, Portfolio } from "../website/StartUp/screens";
+import GlobalLoading from "./GlobalLoading";
 import ErrorRoute from "./ErrorRoute";
 import ROUTES from "@config/_routes";
 import ProjectShowCase from "website/ProjectShowCase";
-import GlobalLoading from "./GlobalLoading";
+import StartUp from "website/StartUp";
+import Market from "website/Market";
+import { Landing as StartUpLanding, Company, Carrer, Blog, Portfolio } from "../website/StartUp/screens";
+import { Landing as MarketLanding, Orders, Sales, Profile, ProfileInfo, EditProfile, OrderLists, OrderDetail, WishList } from "../website/Market/pages"
 
 const router = createBrowserRouter([
   {
@@ -15,12 +17,12 @@ const router = createBrowserRouter([
   },
   {
     path: ROUTES.STARTUP.base,
-    element: <CompanyWebsite />,
+    element: <StartUp />,
     errorElement: <ErrorRoute />,
     children: [
       {
         index: true,
-        element:  <Landing />,
+        element:  <StartUpLanding />,
       },
       {
         path: ROUTES.STARTUP.company,
@@ -40,6 +42,53 @@ const router = createBrowserRouter([
       },
     ],
   },
+  {
+    path: ROUTES.MARKET.base,
+    element: <Market/>,
+    errorElement: <ErrorRoute/>,
+    children: [
+      {
+        index: true,
+        element: <MarketLanding/>,
+      },
+      {
+        path: ROUTES.MARKET.sale,
+        element: <Sales/>
+      },
+      {
+        path: ROUTES.MARKET.profile,
+        element: <Profile/>,
+        children: [
+          {
+            index: true,
+            element: <ProfileInfo/>
+          },
+          {
+            path: ':id',
+            element: <EditProfile/>
+          }
+        ]
+      },
+      {
+        path: ROUTES.MARKET.orders,
+        element: <Orders/>,
+        children: [
+          {
+            index: true,
+            element: <OrderLists/>
+          },
+          {
+            path: ':id',
+            element: <OrderDetail/>
+          },
+          {
+            path: ROUTES.MARKET.wishlist,
+            element: <WishList/>
+          }
+        ]
+      }
+    ]
+  }
 ]);
 
 const AppRoute = () => {
