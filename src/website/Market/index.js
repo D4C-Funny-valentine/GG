@@ -3,17 +3,17 @@ import React from 'react'
 import Navbar from './layout/Navbar'
 import Footer from './layout/Footer'
 import { Outlet } from 'react-router-dom'
-import CommonThemeProvider from '@config/_common-theme'
+import MarketCustomThemeProvider from './config/_theme'
 
 const Market = () => {
   return (
-    <CommonThemeProvider>
+    <MarketCustomThemeProvider>
       <Box>
         <Navbar/>
           <Outlet/>
         <Footer/>
       </Box>
-    </CommonThemeProvider>
+    </MarketCustomThemeProvider>
   )
 }
 

@@ -3,6 +3,7 @@ import Landing from "./Landing"
 import Orders from "./Orders"
 import Profile from "./Profile"
 import Sales from "./Sales"
+import Shop from "./Shop"
 
 const ProfileInfo = lazy(() => import("./Profile/ProfileInfo"));
 const EditProfile = lazy(() => import("./Profile/EditProfile"));
@@ -15,6 +16,7 @@ export {
     Orders,
     Profile,
     Sales,
+    Shop,
 
     ProfileInfo,
     EditProfile,

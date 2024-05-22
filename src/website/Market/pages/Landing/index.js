@@ -1,8 +1,14 @@
+import { Box } from '@mui/material'
 import React from 'react'
+import HeroSection from './HeroSection'
 
 const Landing = () => {
   return (
-    <div>Landing</div>
+    <Box>
+      <Box>
+          <HeroSection/>
+      </Box>
+    </Box>
   )
 }
 
