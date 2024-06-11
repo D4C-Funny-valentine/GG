@@ -13,10 +13,8 @@ const Navbar = () => {
   
   const [showSubMenu, setShowSubMenu] = React.useState([]);
 
-
   const handleMouseEnter = (id) => {
     setShowSubMenu(prev => {
-      console.log('enter');
       let arr = [...prev];
       arr[id] = true;
       return arr
@@ -25,7 +23,6 @@ const Navbar = () => {
 
   const handleMouseLeave = (id) => {
     setShowSubMenu(prev => {
-      console.log('leave');
       let arr = [...prev];
       arr[id] = false;
       return arr
@@ -74,14 +71,14 @@ const Navbar = () => {
                                   bgcolor: 'white',
                                   boxShadow: '0px 8px 45px rgba(3, 0, 71, 0.09)'
                                 }}
-                              >                
+                              >
                               {
                                 showSubMenu[item.id] && (
                                   item.children.map(child => {
                                     if(!child?.children) {
                                       return (
                                         <MenuItem component={'li'} key={child.id}>
-                                            <NavLink to={child?.dynamic ? `${child.to}` : child.to}>
+                                            <NavLink to={child?.dynamic ? `${child.to}` : child.to} onClick={(event) => handleMouseLeave(item.id)}>
                                               <Paragraph sx={{'&:hover' : {color: 'primary.main'}}}>{child.name}</Paragraph>
                                             </NavLink>
                                         </MenuItem>
@@ -123,6 +120,7 @@ const Navbar = () => {
                                                       key={grandChild.id}
                                                       onMouseEnter={(event) => handleMouseEnter(grandChild.id)}
                                                       onMouseLeave={(event) => handleMouseLeave(grandChild.id)}
+                                                      onClick={(event) => handleMouseLeave(item.id)}
                                                     >
                                                       <NavLink to={grandChild.dynamic ? `${grandChild.to}` : grandChild.to}>
                                                         <Paragraph sx={{'&:hover' : {color: 'primary.main'}}}>{grandChild.name}</Paragraph>

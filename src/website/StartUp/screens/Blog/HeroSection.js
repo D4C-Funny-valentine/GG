@@ -1,10 +1,8 @@
 import React from 'react'
 import { Heading, MotionHeroSection } from "@globalComponents/index"
 import { Box } from '@mui/material'
-import { useStartUpThemeSetting } from '../../features';
 
 const HeroSection = () => {
-  const {mode} = useStartUpThemeSetting();
   return (
     <MotionHeroSection 
       url='https://assets.maccarianagency.com/backgrounds/img52.jpg' 

@@ -7,7 +7,7 @@ import ProjectShowCase from "website/ProjectShowCase";
 import StartUp from "website/StartUp";
 import Market from "website/Market";
 import { Landing as StartUpLanding, Company, Carrer, Blog, Portfolio } from "../website/StartUp/screens";
-import { Landing as MarketLanding, Orders, Sales, Profile, ProfileInfo, EditProfile, OrderLists, OrderDetail, WishList } from "../website/Market/pages"
+import { Landing as MarketLanding, Orders, Sales, Profile, ProfileInfo, EditProfile, OrderLists, OrderDetail, WishList, Shop } from "../website/Market/pages"
 
 const router = createBrowserRouter([
   {
@@ -86,6 +86,11 @@ const router = createBrowserRouter([
             element: <WishList/>
           }
         ]
+      },
+      {
+        path: ROUTES.MARKET.shop,
+        element: <Shop/>,
+        errorElement: <ErrorRoute/>
       }
     ]
   }
@@ -100,11 +105,9 @@ const AppRoute = () => {
     >
             <RouterProvider
                 router={router}
-                // fallbackElement={
-                //   <div>
-                //     <h1>Fallback element</h1>
-                //   </div>
-                // }
+                fallbackElement={
+                  <GlobalLoading/>
+                }
             />
     </Suspense>
   );

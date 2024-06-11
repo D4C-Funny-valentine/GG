@@ -1,8 +1,8 @@
 import React from 'react';
-import NotoSan from '../assets/fonts/NotoSans/NotoSansMyanmar-Regular.woff2';
+import NotoSan from '@assets/fonts/NotoSans/NotoSansMyanmar-Regular.woff2';
 import { createTheme, responsiveFontSizes, ThemeProvider, StyledEngineProvider } from "@mui/material";
 // css need to import for font in your index.css
-import "./config.css"
+import "@config/config.css"
 
 const MMFont = {
     fontFamily: 'NotoSansMyanmar',
@@ -16,7 +16,7 @@ const MMFont = {
           'U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF',
 };
 
-const CommonThemeProvider = (props) => {
+const MarketCustomThemeProvider = (props) => {
     const _theme = React.useMemo(() => createTheme({
         spacing: 4,
         mixins:
@@ -36,37 +36,42 @@ const CommonThemeProvider = (props) => {
             fontColor :'#0f3460',
             h1: {
                 fontFamily:  'Noto Sans Myanmar, "Open Sans", "Arial", sans-serif',
-                fontSize: '40px',
-                fontWeight:  800,
+                fontSize: '60px',
+                fontWeight:  700,
             },
             h2: {
                 fontFamily:  'Noto Sans Myanmar, "Open Sans", "Arial", sans-serif',
-                fontSize: '28px',
+                fontSize: '40px',
                 fontWeight:  700,
             },
             h3: {
+                fontFamily:  'Noto Sans Myanmar, "Open Sans", "Arial", sans-serif',
+                fontSize: '30px',
+                fontWeight:  700,
+            },
+            h4: {
                 fontFamily: 'Noto Sans Myanmar, "Open Sans", "Arial", sans-serif',
-                fontSize : '24px',
+                fontSize : '28px',
                 fontWeight:  700,
                 color: '#2b3445'
             },
-            h4: {
+            h5: {
                 fontFamily:  'Noto Sans Myanmar, "Open Sans", "Arial", sans-serif',
-                fontSize: '20px',
+                fontSize: '24px',
                 fontWeight:  600,
             },
-            h5: {
+            h6: {
                 fontFamily:  'Noto Sans Myanmar, "Open Sans", "Arial", sans-serif',
                 fontSize: '20px',
                 fontWeight:  500,
             },
-            h6: {
+            h7: {
                 fontFamily:  'Noto Sans Myanmar, "Open Sans", "Arial", sans-serif',
                 fontSize: '18px',
                 fontWeight:  500,
                 lineHeight: 1.5
             },
-            h7: {
+            h8: {
                 fontFamily:  'Noto Sans Myanmar, "Open Sans", "Arial", sans-serif',
                 fontSize: '16px',
                 fontWeight:  500,
@@ -298,5 +303,5 @@ const CommonThemeProvider = (props) => {
     )
 }
 
-export default CommonThemeProvider
+export default MarketCustomThemeProvider
 
